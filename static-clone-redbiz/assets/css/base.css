@@ -18,18 +18,21 @@
     padding: 0;
     margin: 0;
 }
+
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
     font-family: 'Fira Sans', sans-serif;
     box-sizing: border-box;
 }
+
 /* font-size 62.5% -> convert default font-size 14px --> 1rem = 10px */
 
 .img-content {
     margin: 1.3rem 0;
 }
 
+/* image responsive */
 img {
     max-width: 100%;
     height: auto;
@@ -43,9 +46,7 @@ img {
     margin-right: -5px;
 }
 
-
 /* Button Style */
-
 .primary-btn {
     background: var(--primary-color);
     color: var(--white-color);
@@ -80,7 +81,6 @@ img {
 }
 
 /* Footer Style */
-
 .footer {
     background-color: var(--text-color);
     color: var(--white-color);

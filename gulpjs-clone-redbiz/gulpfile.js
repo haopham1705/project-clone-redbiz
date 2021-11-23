@@ -161,6 +161,7 @@ gulp.task("templatehead2mb", done => {
     done();
 });
 // End build pages
+
 async function menuCate(){ /* task */}
 gulp.task('buildeEjs', done => {
     return gulp.src('./app/page/**/*.ejs')
@@ -173,7 +174,7 @@ gulp.task('buildeEjs', done => {
 gulp.task('watch', function(){
     gulp.watch('./app/scss/**/*.scss', gulp.series('sass'));
     gulp.watch('./app/js/**/*.js', browserSync.reload);
-    gulp.watch('./app/images/*', gulp.series('template'));
+    gulp.watch('./app/images/*', gulp.series('images'));
     gulp.watch('./app/template/globe.html', gulp.series('template'));
     gulp.watch('./app/template/mbglobe.html', gulp.series('template2'));
     gulp.watch('./app/page/*.html', gulp.series('template'));
@@ -181,6 +182,14 @@ gulp.task('watch', function(){
     gulp.log('Finish task');
 });
 
+// Watch Files For Changes | OK
+// gulp.task('watch', function () {
+//     livereload.listen();
+//     gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
+// });
+
+
+// Start browserSync Server
 gulp.task('browserSync', function(){
     browserSync.init({
         port: 3600,
@@ -235,18 +244,14 @@ gulp.task('buildIndex', function () {
 
 // Task run
 gulp.task('start', gulp.parallel(
-    'sass',
-    'lint',
-    'useref',
-    'uglifyes',
-    'template',
-    'watch',
-    'browserSync'
-));
+	'sass',
+	'lint',
+	'useref',
+	'uglifyes',
+	'template', 
+	'watch',
+	'browserSync'
+)
+);
 
-// function style() {
-//     return gulp.src('./scss/**/*.scss')
-//         .pipe(sass())
-//         .pupe(gulp.dest('./css'))
-// }
-// exports.style = style;
+//End task - Clone Redbiz

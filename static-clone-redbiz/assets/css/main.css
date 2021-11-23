@@ -401,3 +401,44 @@ body {
     transition-duration: .3s;
     text-decoration: none;
 }
+
+/* bg section head */
+
+.head-title {
+    position: relative;
+    background-color: var(--white-color);
+    color: var(--white-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+.head-title::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+    background-color: rgba(17, 17, 17, 0.296);
+}
+.head-title h2 {
+    color: var(--white-color);
+    font-size: 3.8rem;
+    text-align: center;
+}
+.head-title ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    list-style-type: none;
+}
+.head-title i {
+    margin-left: 1rem;
+}
+.head-title__content {
+    z-index: 10;
+
+}
