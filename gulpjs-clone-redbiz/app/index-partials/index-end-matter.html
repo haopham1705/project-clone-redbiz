@@ -1,0 +1,11 @@
+<script>
+    const headingList = document.querySelectorAll('.index__section-heading');
+    for (const el of headingList) {
+      el.parentNode.parentNode.insertBefore(el, el.parentNode);
+    }
+
+    const homeItemList = document.querySelectorAll('.index__item-link[href*="index"], .index__item-link[href*="home"]');
+    for (const el of homeItemList) {
+      el.parentNode.parentNode.insertBefore(el.parentNode, el.parentNode.parentNode.firstChild)
+    }
+</script>

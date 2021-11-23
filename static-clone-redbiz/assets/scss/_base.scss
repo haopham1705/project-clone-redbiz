@@ -1,0 +1,140 @@
+@import "./variables";
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Fira Sans", sans-serif;
+    box-sizing: border-box;
+}
+/* font-size 62.5% -> convert rem unit (1rem = 10px) */
+
+.img-content {
+    margin: 1.3rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Button Style */
+
+.primary-btn {
+    background: $primary-color;
+    color: $white-color;
+    font-size: 1.3rem;
+    font-weight: 550;
+    border-radius: 50px;
+    padding: 1rem 1.3rem;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.secondary-btn {
+    display: inline-block;
+    background: $text-color;
+    color: $white-color;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    margin: 15px 0px 2px 0px;
+    padding: 15px 20px;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.btn-sm {
+    display: inline-block;
+    font-weight: 550;
+    font-size: 1.2rem;
+    padding: 11px 22px;
+}
+
+/* Footer Style */
+.footer {
+    background-color: $text-color;
+    color: $white-color;
+    padding: 3rem 1.5rem;
+    &__title {
+        font-size: 2.3rem;
+        line-height: 1.1;
+        margin-top: 2.5rem;
+    }
+    &__title::after {
+        content: "";
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: $primary-color;
+        margin-top: 1rem;
+    }
+    &__logo-img {
+        width: 100%;
+        max-width: 160px;
+    }
+    &__detail-text {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+    &__list {
+        /* border: 1px solid red; */
+        padding: 0;
+        margin: 0;
+    }
+    &__list i {
+        margin-right: 1rem;
+    }
+    &__list li {
+        margin: 1.2rem 0;
+        list-style-type: none;
+    }
+    &__list a {
+        color: $grey-1-color;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
+
+    /* Footer Recent */
+    &__recent {
+        list-style-type: none;
+        padding: 0;
+    }
+    &__recent li {
+        display: flex;
+        margin: 1.2rem 0;
+    }
+    &__recent img {
+        max-width: 100%;
+        width: 75px;
+        height: auto;
+        margin-right: 1rem;
+    }
+    .recent-post {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            color: $grey-1-color;
+        }
+
+        a {
+            text-decoration: none;
+            color: $light-grey-color;
+        }
+    }
+}
