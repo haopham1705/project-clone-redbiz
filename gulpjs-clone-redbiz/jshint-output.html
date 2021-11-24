@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <tr>
+                <th class="text-center">Code</th>
+                <th class="text-center">Line</th>
+                <th class="text-center">Column</th>
+                <th>Evidence</th>
+                <th>Reason</th>
+            </tr>
+            <tr>
+                <td colspan="5"><b>app/js/script-pc.js</b></td>
+            </tr>
+            <tr class="warning">
+                <td class="text-center">W119</td>
+                <td class="text-center">919</td>
+                <td class="text-center">35</td>
+                <td><code>new PerformanceObserver((entryList) =&gt; {</code></td>
+                <td>&#039;arrow function syntax (=&gt;)&#039; is only available in ES6 (use &#039;esversion: 6&#039;).
+                </td>
+            </tr>
+            <tr class="warning">
+                <td class="text-center">W104</td>
+                <td class="text-center">920</td>
+                <td class="text-center">10</td>
+                <td><code> for (const entry of entryList.getEntries()) {</code></td>
+                <td>&#039;const&#039; is available in ES6 (use &#039;esversion: 6&#039;) or Mozilla JS extensions (use
+                    moz).</td>
+            </tr>
+            <tr class="warning">
+                <td class="text-center">W104</td>
+                <td class="text-center">920</td>
+                <td class="text-center">22</td>
+                <td><code> for (const entry of entryList.getEntries()) {</code></td>
+                <td>&#039;for of&#039; is available in ES6 (use &#039;esversion: 6&#039;) or Mozilla JS extensions (use
+                    moz).</td>
+            </tr>
+            <tr class="warning">
+                <td class="text-center">W119</td>
+                <td class="text-center">930</td>
+                <td class="text-center">35</td>
+                <td><code>new PerformanceObserver((entryList) =&gt; {</code></td>
+                <td>&#039;arrow function syntax (=&gt;)&#039; is only available in ES6 (use &#039;esversion: 6&#039;).
+                </td>
+            </tr>
+            <tr class="warning">
+                <td class="text-center">W104</td>
+                <td class="text-center">931</td>
+                <td class="text-center">10</td>
+                <td><code> for (const entry of entryList.getEntriesByName(&#039;first-contentful-paint&#039;)) {</code>
+                </td>
+                <td>&#039;const&#039; is available in ES6 (use &#039;esversion: 6&#039;) or Mozilla JS extensions (use
+                    moz).</td>
+            </tr>
+            <tr class="warning">
+                <td class="text-center">W104</td>
+                <td class="text-center">931</td>
+                <td class="text-center">22</td>
+                <td><code> for (const entry of entryList.getEntriesByName(&#039;first-contentful-paint&#039;)) {</code>
+                </td>
+                <td>&#039;for of&#039; is available in ES6 (use &#039;esversion: 6&#039;) or Mozilla JS extensions (use
+                    moz).</td>
+            </tr>
+        </table>
+        <div class="well">
+            Found <span class="label label-default">6</span> failures - <span class="label label-danger">0 errors</span>
+            &amp; <span class="label label-warning">6 warnings</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

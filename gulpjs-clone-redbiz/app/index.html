@@ -6,35 +6,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta property="og:url" content="https://business.vnexpress.net/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="vnexpress business" />
+    <meta property="og:description"
+        content="vnexpress business chuyên trang bản tinh kinh doanh, kinh tế và thị trường trong và ngoài nước." />
+    <meta property="og:image" content="" />
+    <link rel="shortcut icon" href="../images/vnexpress-e-logo.ico" type="image/x-icon">
+
     <title>
         <!-- build:title -->
     </title>
-    <link rel="shortcut icon" href="./assets/img/vnexpress-e-logo.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="./assets/vendor/normalize.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900">
-    <!-- <link rel="stylesheet" href="./assets/vendor/fontawesome-free-5.15.4-web/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/vendor/bootstrap-5.1.3-dist/css/bootstrap.min.css"> -->
-    
+
     <!-- build:cssOnlyPage -->
-    <link rel="preload" as="style" type="text/css" href="css/styles-pc.min.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="preload" as="script" type="text/javascript" href="js/bundle.min.js">
+    <link rel="preload" as="style" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <!-- <link rel="preload" as="script" type="text/javascript" href="js/bundle.min.js"> -->
     <script type="text/javascript">
-		var domReadyQueue = [];
-	</script>
+        var domReadyQueue = [];
+    </script>
     <!-- build:headOnlyPage -->
 </head>
 
-<body class="oFair" id="webViet_body" itemscope itemtype="http://schema.org/WebPage">
+<body class="oBusiness" id="webViet_body" itemscope itemtype="http://schema.org/WebPage">
     <div class="load"><span class="loading"></span></div>
     <div class="space-header-fixed"></div>
     <header class="header">
     </header>
 
-
     <!-- build:content -->
-
 
     <!-- build:footer -->
     <footer class="page-footer">
@@ -65,31 +70,7 @@
 
     <!-- <script type="text/javascript" src="js/main.min.js?v=99"></script> -->
     <script type="text/javascript" data-type="lazy" data-src="js/main.min.js"></script>
-    <script type="text/javascript" id="flying-scripts">
-        const loadScriptsTimer = setTimeout(loadScripts, 2 * 1000);
-        const userInteractionEvents = ["mouseover", "keydown", "touchstart", "touchmove", "wheel"];
-        userInteractionEvents.forEach(function (event) {
-            window.addEventListener(event, triggerScriptLoader, {
-                passive: !0
-            })
-        });
 
-        function triggerScriptLoader() {
-            loadScripts();
-            clearTimeout(loadScriptsTimer);
-            userInteractionEvents.forEach(function (event) {
-                window.removeEventListener(event, triggerScriptLoader, {
-                    passive: !0
-                })
-            })
-        }
-
-        function loadScripts() {
-            document.querySelectorAll("script[data-type='lazy']").forEach(function (elem) {
-                elem.setAttribute("src", elem.getAttribute("data-src"))
-            })
-        }
-    </script>
     <script type="text/javascript">
         domReadyQueue.push(function ($) {
             // you code here
@@ -99,15 +80,20 @@
     <!--build:js js/main.min.js -->
     <script src="./js/lib/jquery-3.4.1.min.js"></script>
     <script src="./js/lib/popper.min.js"></script>
-    <script src="./js/lib/bootstrap.min.js"></script> 
+    <script src="./js/lib/bootstrap.min.js"></script>
+    <!-- <script src="./js/lib/jquery.waypoints.min.js"></script> -->
     <script src="./js/lib/jquery.appear.js"></script>
-    <script src="./js/lib/wow.js"></script> 
+    <script src="./js/lib/wow.js"></script>
+    <!-- <script src="./js/lib/aos.js"></script> -->
     <script src="./js/lib/jquery.countTo.js"></script>
     <script src="./js/lib/jquery.countdown.min.js"></script>
     <script src="./js/lib/swiper.min.js"></script>
     <script src="./js/lib/jquery.nicescroll.min.js" defer></script>
     <script src="./js/lib/perfect-scrollbar.js"></script>
-    <script src="./js/lib/lightgallery-all.min.js"></script> 
+    <script src="./js/lib/lightgallery-all.min.js"></script>
+    <!-- <script src="./js/lib/jquery.magnific-popup.min.js"></script> -->
+    <!-- <script src="./js/lib/bootbox.min.js"></script> -->
+    <!-- <script src="./js/lib/notify.js"></script> -->
     <script src="./js/script-pc.js"></script>
     <!-- endbuild -->
 

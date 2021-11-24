@@ -1,5 +1,19 @@
-@import './layout/variables';
-@import './layout/_mixin';
-@import './layout/_base';
-@import './layout/_main';
-@import './layout/_responsive';
+/* Scss Document */
+/*----------------------------------------------------
+@library Styles
+---------------------------------------------------- */
+@charset "UTF-8";
+
+@import "lib/_bootstrap.min", "lib/_animate", "lib/_swiper", "lib/_aos", "lib/_countdown",
+    "lib/_perfect-scrollbar", "lib/_lightgallery.min", "lib/_magnific-popup", "lib/_fontawesomepro531";
+
+/* import layout styles */
+@import "./layout/_variables";
+
+@import "./layout/_mixin";
+
+@import "./layout/_base";
+
+@import "./layout/_main";
+
+@import "./layout/_responsive";
