@@ -1,13 +1,8 @@
-/* Scss Document */
-/*----------------------------------------------------
-@library Styles
----------------------------------------------------- */
 @charset "UTF-8";
+/* library styles */
+@import "lib/_bootstrap.min", "lib/_swiper", "lib/_aos", "lib/_lightgallery.min", "lib/_fontawesomepro531";
 
-@import "lib/_bootstrap.min", "lib/_animate", "lib/_swiper", "lib/_aos", "lib/_countdown",
-    "lib/_perfect-scrollbar", "lib/_lightgallery.min", "lib/_magnific-popup", "lib/_fontawesomepro531";
-
-/* import layout styles */
+/* layout styles */
 @import "./layout/_variables";
 
 @import "./layout/_mixin";

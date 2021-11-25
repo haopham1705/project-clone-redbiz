@@ -11,14 +11,14 @@ html {
     font-family: "Fira Sans", sans-serif;
     box-sizing: border-box;
 }
-/* font-size 62.5% -> convert rem unit (1rem = 10px) */
+/* font-size 62.5% -> default font-size 16 -> convert to rem unit (1rem = 10px) */
 
 .img-content {
     margin: 1.3rem 0;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
