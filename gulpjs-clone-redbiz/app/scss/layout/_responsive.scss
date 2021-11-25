@@ -1,8 +1,7 @@
 @import "./variables";
 @import "./mixin";
 
-/* Mobile */
-// @media (max-width: 739px)  
+/* Mobile */ 
 @include maxWidth(739px) {
     .hide-on-mobile {
         display: none;
@@ -13,8 +12,7 @@
     }
 }
 
-/* Mobile & Tablet */
-// @media (max-width: 1023px)  
+/* Mobile & Tablet */ 
 @include maxWidth(1023px) {
     .hide-on-mobile-tablet {
         display: none;
@@ -26,16 +24,14 @@
     }
 }
 
-/* Tablet */
-// @media (min-width: 740px) and (max-width: 1023px) 
+/* Tablet */ 
 @include betweenWidth(740px, 1023px) {
     .hide-on-tablet {
         display: none;
     }
 }
 
-/* PC */
-// @media (min-width: 1024px)
+/* PC */ 
 @include minWidth(1024px) {
     $header-height: 75px;
 

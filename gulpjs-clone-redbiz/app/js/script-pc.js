@@ -15,7 +15,7 @@ function closeNav() {
     // document.body.style.backgroundColor = "#fff";
 
 }
-
+// home-head-slider
 var swiperSlider = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -33,7 +33,7 @@ var swiperSlider = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
-
+// home-client
 var swiperClient = new Swiper(".mySwiperCarousel", {
     slidesPerView: 3,
     spaceBetween: 30,

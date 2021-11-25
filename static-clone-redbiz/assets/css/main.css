@@ -3,6 +3,9 @@ body {
     position: relative;
     color: var(--text-color);
 }
+#app {
+    overflow: hidden;
+}
 
 .header {
     display: flex;

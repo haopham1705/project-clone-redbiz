@@ -94,6 +94,7 @@ gulp.task('uglifyes', function () {
         .pipe(gulp.dest('dist/js/'));
 });
 
+// npm i gulp-jshint-html-reporter
 gulp.task('lint', function () {
     return gulp.src('app/js/*.js')
         .pipe(jshint())
