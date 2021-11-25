@@ -93,4 +93,11 @@
             }
         }
     }
+    .blog-list { 
+
+    &__img-content {
+        display: flex;
+        align-items: flex-start;
+    }
+}
 }
