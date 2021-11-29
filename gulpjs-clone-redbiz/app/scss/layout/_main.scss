@@ -88,6 +88,7 @@ body {
     transition: margin-left 0.5s;
     /* padding: 16px; */
 }
+
 .main-content {
     padding-top: $header-height;
 }
@@ -124,6 +125,7 @@ body {
         align-items: center;
     }
 }
+
 .head__slider {
     img {
         display: block;
@@ -399,6 +401,7 @@ body {
         text-decoration: none;
     }
 }
+
 .section-head-title {
     position: relative;
     background-color: $white-color;
@@ -471,6 +474,7 @@ body {
         }
     }
 }
+
 .blog-list {
     margin: 1.3rem 0;
 
@@ -498,7 +502,8 @@ body {
             letter-spacing: 3px;
             color: $primary-color;
             font-size: 1.2rem;
-            font-weight: 450;
+            font-weight: 500;
+            margin-top: 1rem;
         }
         h4 {
             font-size: 2rem;
@@ -509,22 +514,71 @@ body {
             list-style-type: none;
         }
         li {
-            padding: 3px 0;
             font-weight: 550;
             font-size: 1.2rem;
+            padding: 3.5px 0;
             color: $text-grey-color;
         }
         i {
             // background-color: $primary-color;
             color: $primary-color;
+            margin-right: 5px;
         }
         p {
             font-size: 1.2rem;
             color: $text-grey-color;
+            line-height: 1.8;
         }
     }
 
     &__btn {
         margin: 2rem 0;
+    }
+}
+.product-info {
+    &__heading {
+        font-size: 2.4rem;
+    }
+    &__rating {
+        color: $gold-color;
+    }
+    &__detail {
+        color: $text-grey-color;
+    }
+    &__price {
+        font-size: 2.1rem;
+        font-weight: 550;
+    }
+}
+.cart-quanlity {
+    display: flex;
+
+    input {
+        width: 50px;
+        height: 55px;
+        padding: 0 0 0 20px;
+        font-size: 2rem;
+        border: solid 1px $border-color;
+    }
+    &__control {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 20px;
+        height: 55px;
+        font-size: 1.5rem;
+        border: 1px solid $border-color;
+    }
+    &__btn {
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 0 1rem;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        margin-left: 1rem;
+        font-weight: 550;
+        font-size: 1.5rem;
     }
 }

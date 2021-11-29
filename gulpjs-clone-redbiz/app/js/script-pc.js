@@ -16,7 +16,7 @@ function closeNav() {
 
 }
 // home-head-slider
-var swiperSlider = new Swiper(".mySwiper", {
+var swiperSliderHome = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
     loop: true,
@@ -44,5 +44,49 @@ var swiperClient = new Swiper(".mySwiperCarousel", {
     }
 });
 
-swiperSlider();
+swiperSliderHome();
 swiperClient();
+
+// Product slider
+$('#stage > .gallery').slick({
+    arrows: false,
+    dots: false,
+    asNavFor: '#thumb-gallery',
+});
+
+$('#vertical-thumbs > .gallery').slick({
+    arrows: false,
+    dots: false,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: '#stage-gallery',
+    slidesToShow: 1
+});
+
+$('#vertical-thumbs')
+    .matchHeight({
+        byRow: true,
+        property: 'height',
+        target: $('#stage'),
+    })
+    ._afterUpdate = function (event, groups) {
+        var height = $('#vertical-thumbs').outerHeight(),
+            itemHeight = $('#vertical-thumbs .thumb-item').first().outerHeight();
+
+        var max = Math.floor(height / itemHeight);
+
+        console.log('max', max);
+
+        $('#vertical-thumbs > .gallery').slick('slickSetOption', 'slidesToShow', max, true);
+    };
+
+$('#vertical-thumbs .thumb').on('click', function () {
+
+    var $a = $(this),
+        targetIdx = $a.closest('.thumb-item').data('slickIndex');
+
+    var $slick = $('#stage > .gallery');
+
+    $slick.slick('slickGoTo', targetIdx, false);
+
+});
