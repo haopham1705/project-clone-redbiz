@@ -2,49 +2,7 @@
 	<!-- /build:title -->
 
 	<!-- build:cssOnlyPage -->
-	<style>
-		/* Style tab links */
-		.tablink {
-			background-color: #555;
-			color: white;
-			float: left;
-			border: none;
-			outline: none;
-			cursor: pointer;
-			padding: 14px 16px;
-			font-size: 17px;
-			width: calc(100% / 3);
-		}
 
-		.tablink:hover {
-			background-color: #777;
-		}
-
-		/* Style the tab content (and add height:100% for full page content) */
-		.tabcontent {
-			color: white;
-			display: none;
-			padding: 100px 1rem;
-			height: 450px;
-			border: 1px solid red;
-		}
-
-		#Home {
-			background-color: red;
-		}
-
-		#News {
-			background-color: green;
-		}
-
-		#Contact {
-			background-color: blue;
-		}
-
-		#About {
-			background-color: orange;
-		}
-	</style>
 	<!-- /build:cssOnlyPage -->
 
 	<!-- build:headOnlyPage -->
@@ -100,77 +58,91 @@
 								</div> -->
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="product-info">
-							<h2 class="product-info__heading">Effective Finance Solutions</h2>
-							<div class="product-info__rating">
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-							</div>
-							<div class="product-info__price">
-								$1.200
-							</div>
-
-							<p class="product-info__description">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-								dolor in reprehenderit in voluptate.
-							</p>
-
-							<div class="cart-quanlity">
-								<input type="number" name="quantity" id="" min="1" max="100" step="1" value="1">
-								<div class="cart-quanlity__control">
-									<div class="cart-quanlity__button quantity-up">+</div>
-									<div class="cart-quanlity__button quantity-down">-</div>
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="product-info">
+								<h2 class="product-info__heading">Effective Finance Solutions</h2>
+								<div class="product-info__rating">
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star" aria-hidden="true"></i>
 								</div>
-								<button type="submit" class="cart-quanlity__btn">Buy Now</button>
-							</div>
+								<div class="product-info__price">
+									$1.200
+								</div>
 
-							<div class="product-info__detail">
-								<div>Category: <span>Book / Finance</span></div>
-								<div>Product ID: <span>12345</span></div>
-								<div>Product Tag: <span>Finance, product, planning</span></div>
-							</div>
-							<div class="product-info__social">
-								<span>Share:</span>
-								<a href="#"><i class="fab fa-facebook"></i></a>
-								<a href="#"><i class="fab fa-twitter"></i></a>
+								<p class="product-info__description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+									dolor in reprehenderit in voluptate.
+								</p>
+
+								<div class="cart-quanlity">
+									<input type="number" name="quantity" id="" min="1" max="100" step="1" value="1">
+									<div class="cart-quanlity__control">
+										<div class="cart-quanlity__button quantity-up">+</div>
+										<div class="cart-quanlity__button quantity-down">-</div>
+									</div>
+									<button type="submit" class="cart-quanlity__btn">Buy Now</button>
+								</div>
+
+								<div class="product-info__detail">
+									<div>Category: <span>Book / Finance</span></div>
+									<div>Product ID: <span>12345</span></div>
+									<div>Product Tag: <span>Finance, product, planning</span></div>
+								</div>
+								<div class="product-info__social">
+									<span>Share:</span>
+									<a href="#"><i class="fab fa-facebook"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
+					
 				</div>
 
 				<div class="row">
 					<div class="col-md-12">
-						<div class="product-tabs">
-							<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+						<div class="product-tabs"> 
 							<button class="tablink" onclick="openPage('News', this, 'green')"
 								id="defaultOpen">News</button>
 							<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-
-							<div id="Home" class="tabcontent">
-								<h3>Home</h3>
-								<p>Home is where the heart is..</p>
-							</div>
+							<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
 							<div id="News" class="tabcontent">
-								<h3>News</h3>
-								<p>Some news this fine day!</p>
+								<h3>Product Description</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore
+									magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+									ut aliquip ex ea
+									commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat
+									nulla pariatur.</p>
 							</div>
 
 							<div id="Contact" class="tabcontent">
-								<h3>Contact</h3>
-								<p>Get in touch, or swing by for a cup of coffee.</p>
+								<h3>Additional Infomation</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore
+									magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+									ut aliquip ex ea
+									commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat
+									nulla pariatur.</p>
 							</div>
 
 							<div id="About" class="tabcontent">
-								<h3>About</h3>
-								<p>Who we are and what we do.</p>
+								<h3>Reviews</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore
+									magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+									ut aliquip ex ea
+									commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat
+									nulla pariatur.</p>
 							</div>
 						</div>
 					</div>
@@ -178,6 +150,23 @@
 			</div>
 		</div>
 		</div>
+		<script>
+			function openPage(pageName, elmnt, color) {
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablink");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].style.color = "";
+				}
+				document.getElementById(pageName).style.display = "block";
+				// elmnt.style.backgroundColor = color;
+				elmnt.style.color = "#9f224e";
+			} // Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
 	</main>
 	<!-- /build:content -->
 

@@ -26,7 +26,7 @@ body {
         max-width: 180px;
     }
 
-    /* Side Navbar */
+    /* Header Side Navbar */
     .sidenav {
         height: 100%;
         width: 0;
@@ -48,7 +48,6 @@ body {
             font-size: 25px;
             display: block;
             transition: 0.3s;
-            /* border: 1px red solid; */
         }
 
         a {
@@ -86,7 +85,6 @@ body {
 
 #app {
     transition: margin-left 0.5s;
-    /* padding: 16px; */
 }
 
 .main-content {
@@ -625,5 +623,43 @@ body {
 }
 
 .product-tabs {
-    
+    .tablink {
+        background-color: $bg-grey-color;
+        color: $text-color;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: calc(100% / 3);
+    }
+
+    .tablink:hover {
+        // background-color: #777;
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+        color: $text-color;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+    }
+
+    // #Home {
+    //     background-color: red;
+    // }
+
+    // #News {
+    //     background-color: green;
+    // }
+
+    // #Contact {
+    //     background-color: blue;
+    // }
+
+    // #About {
+    //     background-color: orange;
+    // }
 }
