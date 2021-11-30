@@ -257,11 +257,10 @@ body {
     content: "";
     display: block;
     width: 100px;
-    height: 3px;
+    height: 2px;
     background: $primary-color;
     border-radius: 25%;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: -5px 0 20px;
 }
 
 /* Box Number Content */
@@ -623,15 +622,18 @@ body {
 }
 
 .product-tabs {
+    &__control {
+        margin: 1rem;
+        display: flex;
+    }
     .tablink {
         background-color: $bg-grey-color;
         color: $text-color;
-        float: left;
         border: none;
         outline: none;
         cursor: pointer;
         padding: 14px 16px;
-        font-size: 17px;
+        font-size: 1.7rem;
         width: calc(100% / 3);
     }
 
@@ -643,23 +645,49 @@ body {
     .tabcontent {
         color: $text-color;
         display: none;
-        padding: 100px 20px;
-        height: 100%;
+        padding: 30px 20px;
+        margin: 0 1rem;
+        height: 200%;
+        background-color: $bg-grey-color;
+
+        &__list {
+            list-style-type: none;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 1rem;
+                border-bottom: 1px dashed $grey-1-color;
+                font-size: 1.4rem;
+
+                span {
+                    font-size: 1.3rem;
+                    font-weight: 550;
+                }
+            }
+        }
     }
+}
 
-    // #Home {
-    //     background-color: red;
+.product-slider {
+    // .block {
+    //     min-height: 100vh;
+    //     max-width: 960px;
+    //     margin: 0 auto;
+    //     background: #fff;
     // }
 
-    // #News {
-    //     background-color: green;
+    // .slider-gallery .slide,
+    // .slider-thumbs .slide {
+    //     min-height: 10rem;
+    //     border: 6px solid $border-color;
+    //     padding: 6px;
     // }
-
-    // #Contact {
-    //     background-color: blue;
+    // .slider-gallery .slide {
+    //     min-height: 28rem;
+    //     border-color: lightgreen;
     // }
-
-    // #About {
-    //     background-color: orange;
+    // .slider-thumbs .slick-current .slide {
+    //     border-color: lightblue;
     // }
 }
