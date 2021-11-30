@@ -1,3 +1,20 @@
+function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 
 // Side Nabar action
 function openNav() {
@@ -47,46 +64,3 @@ var swiperClient = new Swiper(".mySwiperCarousel", {
 swiperSliderHome();
 swiperClient();
 
-// Product slider
-$('#stage > .gallery').slick({
-    arrows: false,
-    dots: false,
-    asNavFor: '#thumb-gallery',
-});
-
-$('#vertical-thumbs > .gallery').slick({
-    arrows: false,
-    dots: false,
-    vertical: true,
-    verticalSwiping: true,
-    asNavFor: '#stage-gallery',
-    slidesToShow: 1
-});
-
-$('#vertical-thumbs')
-    .matchHeight({
-        byRow: true,
-        property: 'height',
-        target: $('#stage'),
-    })
-    ._afterUpdate = function (event, groups) {
-        var height = $('#vertical-thumbs').outerHeight(),
-            itemHeight = $('#vertical-thumbs .thumb-item').first().outerHeight();
-
-        var max = Math.floor(height / itemHeight);
-
-        console.log('max', max);
-
-        $('#vertical-thumbs > .gallery').slick('slickSetOption', 'slidesToShow', max, true);
-    };
-
-$('#vertical-thumbs .thumb').on('click', function () {
-
-    var $a = $(this),
-        targetIdx = $a.closest('.thumb-item').data('slickIndex');
-
-    var $slick = $('#stage > .gallery');
-
-    $slick.slick('slickGoTo', targetIdx, false);
-
-});

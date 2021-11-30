@@ -465,6 +465,7 @@ body {
             font-size: 1.7rem;
         }
     }
+
     &__img {
         overflow: hidden;
         padding: 0.5rem 1.4rem;
@@ -535,23 +536,63 @@ body {
         margin: 2rem 0;
     }
 }
+
 .product-info {
     &__heading {
-        font-size: 2.4rem;
+        margin: 1.5rem 0;
+        font-size: 3rem;
     }
     &__rating {
         color: $gold-color;
+        margin: 10px 0;
+        font-size: 1.7rem;
     }
-    &__detail {
+    &__description {
         color: $text-grey-color;
+        font-size: 1.5rem;
+        line-height: 1.7;
     }
     &__price {
-        font-size: 2.1rem;
+        font-size: 2.8rem;
         font-weight: 550;
+        margin: 10px 0;
+    }
+    &__detail {
+        div {
+            font-size: 1.4rem;
+            font-weight: 550;
+            margin: 1rem 0;
+        }
+        span {
+            color: $text-grey-color;
+            margin-left: 2rem;
+        }
+    }
+    &__social {
+        margin: 1rem 0;
+        background-color: $bg-grey-color;
+        padding: 2rem 1rem;
+        border-radius: 5px;
+
+        span {
+            color: $text-color;
+            font-size: 1.5rem;
+            font-weight: 550;
+        }
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+        i {
+            font-size: 2.3rem;
+            margin-left: 1.3rem;
+        }
     }
 }
+
 .cart-quanlity {
     display: flex;
+    margin: 2rem 0;
 
     input {
         width: 50px;
@@ -581,4 +622,8 @@ body {
         font-weight: 550;
         font-size: 1.5rem;
     }
+}
+
+.product-tabs {
+    
 }

@@ -3,54 +3,47 @@
 
 	<!-- build:cssOnlyPage -->
 	<style>
-	    .imgw-responsive {
-	        width: 100%;
-	        height: auto;
-	    }
+		/* Style tab links */
+		.tablink {
+			background-color: #555;
+			color: white;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			font-size: 17px;
+			width: calc(100% / 3);
+		}
 
-	    .embed-responsive-2by1 {
-	        padding-bottom: 50%;
-	    }
+		.tablink:hover {
+			background-color: #777;
+		}
 
-	    #product-slider {
-	        padding: 0 7%;
-	    }
+		/* Style the tab content (and add height:100% for full page content) */
+		.tabcontent {
+			color: white;
+			display: none;
+			padding: 100px 1rem;
+			height: 450px;
+			border: 1px solid red;
+		}
 
-	    #vertical-thumbs {
-	        overflow: auto;
-	    }
+		#Home {
+			background-color: red;
+		}
 
-	    .thumb-item {
-	        padding: 0px 10px 20px;
-	    }
+		#News {
+			background-color: green;
+		}
 
-	    .thumb-item .thumb {
-	        cursor: pointer;
-	        cursor: hand;
-	    }
+		#Contact {
+			background-color: blue;
+		}
 
-
-	    #stage {
-	        border: solid 1px #5d7563;
-	        padding: 0;
-	    }
-
-	    #stage>.gallery {
-	        white-space: nowrap;
-	    }
-
-	    #stage .stage-item {
-	        white-space: normal;
-	    }
-
-	    .gallery {
-	        height: 100%;
-	    }
-
-	    .slick-list {
-	        overflow: hidden;
-	        height: 100% !important;
-	    }
+		#About {
+			background-color: orange;
+		}
 	</style>
 	<!-- /build:cssOnlyPage -->
 
@@ -59,159 +52,136 @@
 
 	<!-- build:content -->
 	<main id="content" class="main-content">
-	    <div class="section-head-title" style="background-image: url(./images/place/newyork.jpg);">
-	        <div class="section-head-title__content">
-	            <h2>Shop Single</h2>
-	            <ul>
-	                <li>Home</li>
-	                <li><i class="fas fa-chevron-right"></i>
-	                    Shop Single
-	                </li>
-	            </ul>
-	        </div>
-	    </div>
-	    <div class="shop-cart">
-	        <div class="section-block">
-	            <div class="container">
-	                <div class="row">
-	                    <!-- slick slider -->
-	                    <div class="col-md-6 col-sm-6 col-12">
-	                        <div id="product-slider">
-	                            <div id="vertical-thumbs" class="col-xs-3 mh">
-	                                <div id="thumb-gallery" class="gallery">
-	                                    <div class="thumb-item">
-	                                        <div class="embed-responsive embed-responsive-2by1">
-	                                            <div class="embed-responsive-item">
-	                                                <a class="thumb" data-target-idx="0">
-	                                                    <img class="imgw-responsive"
-	                                                        src="https://source.unsplash.com/7mbvu0biZgg/300x150" />
-	                                                </a>
-	                                            </div>
-	                                        </div>
-	                                    </div>
+		<div class="section-head-title" style="background-image: url(./images/place/newyork.jpg);">
+			<div class="section-head-title__content">
+				<h2>Shop Single</h2>
+				<ul>
+					<li>Home</li>
+					<li><i class="fas fa-chevron-right"></i>
+						Shop Single
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="shop-cart">
+			<div class="section-block">
+				<div class="container">
+					<div class="row">
+						<!-- slick slider -->
+						<div class="col-md-6 col-sm-6 col-12">
+							<div id="product-slider">
+								<div id="aniimated-thumbnials" class="slider-for">
+									<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">
+										<img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" />
+									</a>
+									<!-- <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">
+										<img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" />
+									</a>
+									<a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">
+										<img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" />
+									</a>
+									<a href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg">
+										<img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" />
+									</a> -->
+								</div>
+								<!-- <div class="slider-nav">
+									<div class="item-slick">
+										<img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" alt="Alt">
+									</div>
+									<div class="item-slick">
+										<img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" alt="Alt">
+									</div>
+									<div class="item-slick">
+										<img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" alt="Alt">
+									</div>
+									<div class="item-slick">
+										<img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" alt="Alt">
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-12">
+						<div class="product-info">
+							<h2 class="product-info__heading">Effective Finance Solutions</h2>
+							<div class="product-info__rating">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>
+							<div class="product-info__price">
+								$1.200
+							</div>
 
-	                                    <div class="thumb-item">
-	                                        <div class="embed-responsive embed-responsive-2by1">
-	                                            <div class="embed-responsive-item">
-	                                                <a class="thumb" data-target-idx="1">
-	                                                    <img class="imgw-responsive"
-	                                                        src="https://source.unsplash.com/OZdKEwDXXJU/300x150" />
-	                                                </a>
-	                                            </div>
-	                                        </div>
-	                                    </div>
+							<p class="product-info__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+								dolor in reprehenderit in voluptate.
+							</p>
 
-	                                    <div class="thumb-item">
-	                                        <div class="embed-responsive embed-responsive-2by1">
-	                                            <div class="embed-responsive-item">
-	                                                <a class="thumb" data-target-idx="2">
-	                                                    <img class="imgw-responsive"
-	                                                        src="https://source.unsplash.com/GY5PGc6V278/300x150" />
-	                                                </a>
-	                                            </div>
-	                                        </div>
-	                                    </div>
+							<div class="cart-quanlity">
+								<input type="number" name="quantity" id="" min="1" max="100" step="1" value="1">
+								<div class="cart-quanlity__control">
+									<div class="cart-quanlity__button quantity-up">+</div>
+									<div class="cart-quanlity__button quantity-down">-</div>
+								</div>
+								<button type="submit" class="cart-quanlity__btn">Buy Now</button>
+							</div>
 
-	                                    <div class="thumb-item">
-	                                        <div class="embed-responsive embed-responsive-2by1">
-	                                            <div class="embed-responsive-item">
-	                                                <a class="thumb" data-target-idx="3">
-	                                                    <img class="imgw-responsive"
-	                                                        src="https://source.unsplash.com/Hc42xXu_WOg/300x150" />
-	                                                </a>
-	                                            </div>
-	                                        </div>
-	                                    </div>
+							<div class="product-info__detail">
+								<div>Category: <span>Book / Finance</span></div>
+								<div>Product ID: <span>12345</span></div>
+								<div>Product Tag: <span>Finance, product, planning</span></div>
+							</div>
+							<div class="product-info__social">
+								<span>Share:</span>
+								<a href="#"><i class="fab fa-facebook"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-	                                </div>
-	                            </div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="product-tabs">
+							<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+							<button class="tablink" onclick="openPage('News', this, 'green')"
+								id="defaultOpen">News</button>
+							<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
 
-	                            <div id="stage" class="col-xs-9 mh">
-	                                <div id="stage-gallery" class="gallery">
+							<div id="Home" class="tabcontent">
+								<h3>Home</h3>
+								<p>Home is where the heart is..</p>
+							</div>
 
-	                                    <div class="stage-item">
-	                                        <div class="embed-responsive embed-responsive-16by9">
-	                                            <div class="embed-responsive-item">
-	                                                <img class="imgw-responsive"
-	                                                    src="https://source.unsplash.com/7mbvu0biZgg/700x394" />
-	                                            </div>
-	                                        </div>
-	                                    </div>
+							<div id="News" class="tabcontent">
+								<h3>News</h3>
+								<p>Some news this fine day!</p>
+							</div>
 
-	                                    <div class="stage-item">
-	                                        <div class="embed-responsive embed-responsive-16by9">
-	                                            <div class="embed-responsive-item">
-	                                                <img class="imgw-responsive"
-	                                                    src="https://source.unsplash.com/OZdKEwDXXJU/700x394" />
-	                                            </div>
-	                                        </div>
-	                                    </div>
+							<div id="Contact" class="tabcontent">
+								<h3>Contact</h3>
+								<p>Get in touch, or swing by for a cup of coffee.</p>
+							</div>
 
-	                                    <div class="stage-item">
-	                                        <div class="embed-responsive embed-responsive-16by9">
-	                                            <div class="embed-responsive-item">
-	                                                <img class="imgw-responsive"
-	                                                    src="https://source.unsplash.com/GY5PGc6V278/700x394" />
-	                                            </div>
-	                                        </div>
-	                                    </div>
-
-	                                    <div class="stage-item">
-	                                        <div class="embed-responsive embed-responsive-16by9">
-	                                            <div class="embed-responsive-item">
-	                                                <img class="imgw-responsive"
-	                                                    src="https://source.unsplash.com/Hc42xXu_WOg/700x394" />
-	                                            </div>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="clearfix"></div>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-6 col-sm-6 col-12">
-                            <div class="product-info">
-                               <h2 class="product-info__heading">Effective Finance Solutions</h2>
-                               <div class="product-info__rating">
-                                   <i class="fa fa-star" aria-hidden="true"></i>
-                                   <i class="fa fa-star" aria-hidden="true"></i>
-                                   <i class="fa fa-star" aria-hidden="true"></i>
-                                   <i class="fa fa-star" aria-hidden="true"></i>
-                                   <i class="fa fa-star" aria-hidden="true"></i>
-                               </div>
-							   
-                               <div class="product-info__price">
-                                   $1.200
-                               </div>
-
-                               <p class="product-info__detail">
-                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                   dolor in reprehenderit in voluptate.
-                               </p>
-
-                               <div class="cart-quanlity">
-                                   <input type="number" name="quantity" id="" min="1" max="100" step="1" value="1">
-                                   <div class="cart-quanlity__control">
-                                       <div class="cart-quanlity__button quantity-up">+</div>
-                                       <div class="cart-quanlity__button quantity-down">-</div>
-                                   </div>
-                                   <button type="submit" class="cart-quanlity__btn">Buy Now</button>
-                               </div>
-                            </div>
-                        </div>
-	                </div>
-	                <div class="row">
-                        
-	                </div>
-	            </div>
-	        </div>
-	    </div>
+							<div id="About" class="tabcontent">
+								<h3>About</h3>
+								<p>Who we are and what we do.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
 	</main>
 	<!-- /build:content -->
 
 	<div class="wrap-popup-page" id="wrap_popup_page">
-	    <!-- build:popup -->
-	    <!-- /build:popup -->
+		<!-- build:popup -->
+		<!-- /build:popup -->
 	</div>
