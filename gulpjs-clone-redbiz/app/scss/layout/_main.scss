@@ -159,7 +159,7 @@ body {
 
 /* Section Content */
 .section-block {
-    padding: 4.3rem 0px;
+    padding: 8rem 0px;
     background-color: $white-color;
 }
 
@@ -410,7 +410,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    height: 30vh;
+    height: 35vh;
     justify-content: center;
     align-items: center;
     &::before {
@@ -734,6 +734,10 @@ body {
         max-width: 100%;
     }
 }
+
+.contact-content {
+    margin-top: 20px;
+}
 .contact-form {
     input[type="text"],
     input[type="email"],
@@ -758,9 +762,9 @@ body {
     }
 
     input[type="submit"] {
-        background-color: $primary-color;
+        background-color: $bg-black-color;
         color: $white-color;
-        padding: 12px 20px;
+        padding: 17px 0;
         border: none;
         border-radius: 8px;
         cursor: pointer;
@@ -770,6 +774,7 @@ body {
     }
 
     input[type="submit"]:hover {
+        background-color: $primary-color;
         filter: brightness(120%);
     }
 }
@@ -777,7 +782,7 @@ body {
 .contact-show {
     &__item {
         display: flex;
-        margin: 2rem 0 1rem;
+        margin: 0 0 2.5rem;
         padding: 1rem 0;
         border-bottom: 1px solid $border-color;
     }
@@ -813,7 +818,7 @@ body {
     }
 
     &__item {
-        margin-top: 2rem;
+        margin: 35px 0;
     }
 
     &__close {
@@ -887,5 +892,10 @@ body {
         border-top: 1px solid $border-color;
         display: flex;
         justify-content: space-between;
+    }
+
+    &__payment-btn {
+        text-align: right;
+        margin-top: 25px;
     }
 }
