@@ -1,0 +1,75 @@
+.contact-content {
+    margin-top: 20px;
+}
+.contact-form {
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid $light-grey-color;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 6px 3px;
+        margin-bottom: 16px;
+        resize: vertical;
+        font-size: 1.3rem;
+        font-weight: 550;
+        background-color: $light-grey-color;
+    }
+    &__field {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    input[type="submit"] {
+        background-color: $bg-black-color;
+        color: $white-color;
+        padding: 17px 0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.3rem;
+        font-weight: 550;
+    }
+
+    input[type="submit"]:hover {
+        background-color: $primary-color;
+        filter: brightness(120%);
+    }
+}
+
+.contact-show {
+    &__item {
+        display: flex;
+        margin: 0 0 2.5rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid $border-color;
+    }
+    i {
+        width: 60px;
+        height: 60px;
+        background-color: $primary-color;
+        color: $white-color;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        padding-top: 1.7rem;
+        text-align: center;
+        margin-right: 2rem;
+    }
+    &__content {
+        h4 {
+            font-weight: 550;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+        p {
+            color: $grey-color;
+            font-size: 1.4rem;
+        }
+    }
+}

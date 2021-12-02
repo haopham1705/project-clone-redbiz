@@ -41,6 +41,10 @@
 
     .header {
         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        position: sticky;
+        top: $topbar-height;
+        // border: 1px solid red;
+
         &__logo {
             width: 100%;
             max-width: 30vw;
@@ -52,11 +56,9 @@
         }
         .sidenav {
             position: static;
+            width: 100%;
             height: auto;
             box-shadow: none;
-            width: 100%;
-            max-width: 70vw;
-            background-color: $white-color;
             padding: 0;
             margin: 0;
 
@@ -84,7 +86,7 @@
     }
 
     .main-content {
-        padding-top: $header-height + 20px;
+        padding-top: 0;
         &__slider {
             height: 100vh;
             img {

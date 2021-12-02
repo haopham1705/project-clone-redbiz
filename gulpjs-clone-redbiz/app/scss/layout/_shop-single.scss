@@ -1,0 +1,197 @@
+.product-info {
+    &__heading {
+        margin: 1.5rem 0;
+        font-size: 3rem;
+    }
+    &__rating {
+        color: $gold-color;
+        margin: 10px 0;
+        font-size: 1.7rem;
+    }
+    &__description {
+        color: $text-grey-color;
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+    &__price {
+        font-size: 2.8rem;
+        font-weight: 550;
+        margin: 10px 0;
+    }
+    &__detail {
+        div {
+            color: $text-grey-color;
+            font-size: 1.4rem;
+            margin: 1rem 0;
+            display: flex;
+        }
+        span {
+            display: block;
+            color: $text-color;
+            font-weight: 550;
+            width: 20%;
+        }
+    }
+    &__social {
+        margin: 1rem 0;
+        background-color: $bg-grey-color;
+        padding: 2rem 1rem;
+        border-radius: 5px;
+
+        span {
+            color: $text-color;
+            font-size: 1.5rem;
+            font-weight: 550;
+        }
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+        i {
+            font-size: 2.3rem;
+            margin-left: 1.3rem;
+        }
+    }
+}
+
+.cart-quanlity {
+    display: flex;
+    margin: 2rem 0;
+
+    input {
+        width: 55px;
+        height: 55px;
+        padding: 0 0 0 15px;
+        font-size: 2.6rem;
+        border: solid 1px $border-color;
+    }
+    &__control {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 20px;
+        height: 55px;
+        font-size: 1.5rem;
+        border: 1px solid $border-color;
+    }
+    &__btn {
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 0 1rem;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        margin-left: 1rem;
+        font-weight: 550;
+        font-size: 1.5rem;
+    }
+}
+
+.product-tabs {
+    &__control {
+        margin: 1rem;
+        display: flex;
+    }
+    .tablink {
+        background-color: $bg-grey-color;
+        color: $text-color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 1.7rem;
+        width: calc(100% / 3);
+        margin: 2px;
+    }
+
+    .tablink:hover {
+        // background-color: #777;
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+        color: $text-color;
+        display: none;
+        padding: 30px 20px;
+        margin: 0 1rem;
+        height: 200%;
+        background-color: $bg-grey-color;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        &__list {
+            list-style-type: none;
+
+            li {
+                display: flex;
+                padding: 2rem 1rem;
+                border-bottom: 1px dashed $grey-1-color;
+                font-size: 1.5rem;
+
+                span {
+                    display: block;
+                    width: 35%;
+                    font-size: 1.5rem;
+                    font-weight: 550;
+                }
+            }
+        }
+
+        &__review {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 45px;
+
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%;
+                font-size: 1.4rem;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+
+            input[type="submit"] {
+                background-color: $primary-color;
+                color: $white-color;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                width: 50%;
+                font-size: 1.3rem;
+                font-weight: 550;
+            }
+        }
+    }
+}
+
+.product-gallery {
+    .demo {
+        width: 450px;
+    }
+    ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    li {
+        display: block;
+        float: left;
+        margin-right: 6px;
+        cursor: pointer;
+    }
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+}

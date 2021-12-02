@@ -18,10 +18,10 @@
 	<title>
 		<!-- build:title -->
 	</title>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900">
-
 	<!-- build:cssOnlyPage -->
 	<link rel="preload" as="style" type="text/css" href="./css/main-style.min.css">
 	<link rel="stylesheet" href="./css/main-style.min.css">
@@ -29,59 +29,77 @@
 	<script type="text/javascript">
 		var domReadyQueue = [];
 	</script>
-
 	<!-- build:headOnlyPage -->
 </head>
 
 <body class="oBusiness" id="body_area" data-height-small="false" itemscope itemtype="http://schema.org/WebPage">
-
 	<div id="app">
+		<div class="topbar hide-on-mobile">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 col-sm-9 col-12">
+						<div class="topbar__info">
+							<span>Welcome to Professional Consulting Agency</span>
+							<span><i class="fas fa-phone"></i>(+123)-456-7890</span>
+							<span><i class="fas fa-envelope"></i>sale1@vnexpress.net</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-12">
+						<ul class="topbar__social hidden-md-down">
+							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		<header class="header">
 			<!-- <div class="container"> -->
-				<div class="header__logo">
-					<a href="./index.html" class="header__logo-link">
-						<img src="./images/vnexpress-business-logo.png" alt="redbiz img" class="header__logo-img">
-					</a>
-				</div>
-				<!-- Side Navbar -->
-				<nav id="mySidenav" class="sidenav">
-					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="header__logo">
+				<a href="./index.html" class="header__logo-link">
+					<img src="./images/vnexpress-business-logo.png" alt="redbiz img" class="header__logo-img">
+				</a>
+			</div>
+			<!-- Side Navbar -->
+			<nav id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-					<ul class="side-navbar__list">
-						<li class="side-navbar__item">
-							<a href="./index.html">Home
-								<i class="fas fa-chevron-down"></i></a>
-							<!-- <ul class="sub-nav">
+				<ul class="side-navbar__list">
+					<li class="side-navbar__item">
+						<a href="./index.html">Home
+							<i class="fas fa-chevron-down"></i></a>
+						<!-- <ul class="sub-nav">
                             <li><a href="#">Sub nav</a></li>
                             <li><a href="#">Sub nav</a></li>
                             <li><a href="#">Sub nav</a></li>
                         </ul> -->
-						</li>
-						<li class="side-navbar__item">
-							<a href="#">About
-								<i class="fas fa-chevron-down"></i></a>
-						</li>
-						<li class="side-navbar__item">
-							<a href="./blog.html">Blog</a>
-						</li>
-						<li class="side-navbar__item">
-							<a href="./shop.html">Shop</a>
-						</li>
-						<li class="side-navbar__item">
-							<a href="./shop-single.html">Shop Single</a>
-						</li>
-						<li class="side-navbar__item">
-							<a href="./shop-cart.html">Shop Cart</a>
-						</li>
-						<li class="side-navbar__item">
-							<a href="./contact.html">Contact</a>
-						</li>
-					</ul>
-				</nav>
-				<div onclick="closeNav()" id="overlay-navbar"></div>
-
-				<span class="hide-on-pc" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-			<!-- </div> -->
+					</li>
+					<li class="side-navbar__item">
+						<a href="#">About
+							<i class="fas fa-chevron-down"></i></a>
+					</li>
+					<li class="side-navbar__item">
+						<a href="./blog.html">Blog</a>
+					</li>
+					<li class="side-navbar__item">
+						<a href="./shop.html">Shop</a>
+					</li>
+					<li class="side-navbar__item">
+						<a href="./shop-single.html">Shop Single</a>
+					</li>
+					<li class="side-navbar__item">
+						<a href="./shop-cart.html">Shop Cart</a>
+					</li>
+					<li class="side-navbar__item">
+						<a href="./contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<div onclick="closeNav()" id="overlay-navbar"></div>
+			<span class="hide-on-pc" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			
 		</header>
 
 		<!-- Start popup menu -->

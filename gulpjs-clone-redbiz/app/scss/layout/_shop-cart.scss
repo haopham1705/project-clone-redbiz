@@ -1,0 +1,90 @@
+.shop-cart {
+    &__list {
+        border: 1px solid $border-color;
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 1rem;
+    }
+
+    &__item {
+        margin: 35px 0;
+    }
+
+    &__close {
+        display: block;
+        padding: 10px 0 15px;
+        i {
+            background-color: $primary-color;
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            padding: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin: 1rem 0;
+        h4 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        span {
+            font-size: 1.6rem;
+            color: $primary-color;
+        }
+    }
+
+    &__quantity {
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        h6 {
+            font-size: 1.6rem;
+            margin-right: 1.2rem;
+        }
+        input {
+            width: 80px;
+            border: 1px solid #ececec;
+            color: $grey-color;
+            font-size: 1.4rem;
+        }
+    }
+    &__price {
+        margin: 1rem 0;
+        color: $grey-color;
+        font-size: 2.2rem;
+    }
+
+    &__payment {
+        border: 1px solid $border-color;
+        padding: 10px;
+        font-size: 1.8rem;
+    }
+
+    &__payment-list {
+        color: $text-color;
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.6rem 0;
+
+            h6 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__payment-total {
+        padding-top: 2rem;
+        border-top: 1px solid $border-color;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__payment-btn {
+        text-align: right;
+        margin-top: 25px;
+    }
+}
