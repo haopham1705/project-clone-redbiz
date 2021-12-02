@@ -37,46 +37,51 @@
 
 	<div id="app">
 		<header class="header">
-			<div class="header__logo">
-				<a href="./index.html" class="header__logo-link">
-					<img src="./images/vnexpress-business-logo.png" alt="redbiz img" class="header__logo-img">
-				</a>
-			</div>
-			<!-- Side Navbar -->
-			<nav id="mySidenav" class="sidenav">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<!-- <div class="container"> -->
+				<div class="header__logo">
+					<a href="./index.html" class="header__logo-link">
+						<img src="./images/vnexpress-business-logo.png" alt="redbiz img" class="header__logo-img">
+					</a>
+				</div>
+				<!-- Side Navbar -->
+				<nav id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-				<ul class="side-navbar__list">
-					<li class="side-navbar__item">
-						<a href="./index.html">Home
-							<i class="fas fa-chevron-down"></i></a>
-						<!-- <ul class="sub-nav">
+					<ul class="side-navbar__list">
+						<li class="side-navbar__item">
+							<a href="./index.html">Home
+								<i class="fas fa-chevron-down"></i></a>
+							<!-- <ul class="sub-nav">
                             <li><a href="#">Sub nav</a></li>
                             <li><a href="#">Sub nav</a></li>
                             <li><a href="#">Sub nav</a></li>
                         </ul> -->
-					</li>
-					<li class="side-navbar__item">
-						<a href="#">About
-							<i class="fas fa-chevron-down"></i></a>
-					</li>
-					<li class="side-navbar__item">
-						<a href="./blog.html">Blog</a>
-					</li>
-					<li class="side-navbar__item">
-						<a href="./shop.html">Shop</a>
-					</li>
-					<li class="side-navbar__item">
-						<a href="./shop-cart.html">Product</a>
-					</li>
-					<li class="side-navbar__item">
-						<a href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
-			<div onclick="closeNav()" id="overlay-navbar"></div>
+						</li>
+						<li class="side-navbar__item">
+							<a href="#">About
+								<i class="fas fa-chevron-down"></i></a>
+						</li>
+						<li class="side-navbar__item">
+							<a href="./blog.html">Blog</a>
+						</li>
+						<li class="side-navbar__item">
+							<a href="./shop.html">Shop</a>
+						</li>
+						<li class="side-navbar__item">
+							<a href="./shop-single.html">Shop Single</a>
+						</li>
+						<li class="side-navbar__item">
+							<a href="#">Shop Cart</a>
+						</li>
+						<li class="side-navbar__item">
+							<a href="./contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div onclick="closeNav()" id="overlay-navbar"></div>
 
-			<span class="hide-on-pc" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+				<span class="hide-on-pc" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			<!-- </div> -->
 		</header>
 
 		<!-- Start popup menu -->
@@ -190,7 +195,7 @@
 				elem.setAttribute("src", elem.getAttribute("data-src"))
 			});
 		}
-	</script> 
+	</script>
 	<!-- build:jsOnlyPage -->
 
 </body>

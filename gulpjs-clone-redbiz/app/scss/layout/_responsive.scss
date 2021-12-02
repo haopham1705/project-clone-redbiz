@@ -1,5 +1,5 @@
 @import "./variables";
-@import "./mixin";
+@import "./mixins";
 
 /* Mobile */
 @include maxWidth(739px) {
@@ -34,7 +34,7 @@
 /* PC */
 @include minWidth(1024px) {
     $header-height: 75px;
-    
+
     .hide-on-pc {
         display: none;
     }
@@ -96,6 +96,12 @@
         &__img-content {
             display: flex;
             align-items: flex-start;
+        }
+    }
+    .contact-form {
+        &__field {
+            display: flex;
+            flex-wrap: nowrap;
         }
     }
 }

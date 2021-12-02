@@ -44,5 +44,7 @@ var swiperClient = new Swiper(".mySwiperCarousel", {
     }
 });
 
-swiperSliderHome();
-swiperClient();
+swiperSliderHome;
+swiperClient;
+
+

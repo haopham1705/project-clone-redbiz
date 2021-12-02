@@ -1,4 +1,4 @@
-// Responsive
+// Break-point Responsive
 @mixin maxWidth($value) {
     @media screen and (max-width: $value){
         @content;
@@ -17,7 +17,7 @@
     }
 }
 
-// direction
+// Direction
 @mixin absoluteCenter($direction: 'left') {
     @if $direction == 'left' {
         left: 50%;

@@ -1,5 +1,5 @@
 @import "./variables";
-@import "./mixin";
+@import "./mixins";
 
 body {
     position: relative;
@@ -200,6 +200,9 @@ body {
 /* Content-Heading */
 .section-heading {
     margin-bottom: 10px;
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    font-weight: 550;
     span {
         position: relative;
         font-size: 2rem;
@@ -556,13 +559,16 @@ body {
     }
     &__detail {
         div {
+            color: $text-grey-color;
             font-size: 1.4rem;
-            font-weight: 550;
             margin: 1rem 0;
+            display: flex;
         }
         span {
-            color: $text-grey-color;
-            margin-left: 2rem;
+            display: block;
+            color: $text-color;
+            font-weight: 550;
+            width: 20%;
         }
     }
     &__social {
@@ -592,10 +598,10 @@ body {
     margin: 2rem 0;
 
     input {
-        width: 50px;
+        width: 55px;
         height: 55px;
-        padding: 0 0 0 20px;
-        font-size: 2rem;
+        padding: 0 0 0 15px;
+        font-size: 2.6rem;
         border: solid 1px $border-color;
     }
     &__control {
@@ -635,6 +641,7 @@ body {
         padding: 14px 16px;
         font-size: 1.7rem;
         width: calc(100% / 3);
+        margin: 2px;
     }
 
     .tablink:hover {
@@ -650,44 +657,209 @@ body {
         height: 200%;
         background-color: $bg-grey-color;
 
+        p {
+            font-size: 1.5rem;
+        }
+
         &__list {
             list-style-type: none;
 
             li {
                 display: flex;
-                justify-content: space-between;
                 padding: 2rem 1rem;
                 border-bottom: 1px dashed $grey-1-color;
-                font-size: 1.4rem;
+                font-size: 1.5rem;
 
                 span {
-                    font-size: 1.3rem;
+                    display: block;
+                    width: 35%;
+                    font-size: 1.5rem;
                     font-weight: 550;
                 }
+            }
+        }
+
+        &__review {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 45px;
+
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%;
+                font-size: 1.4rem;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
             }
         }
     }
 }
 
-.product-slider {
-    // .block {
-    //     min-height: 100vh;
-    //     max-width: 960px;
-    //     margin: 0 auto;
-    //     background: #fff;
-    // }
+.product-gallery {
+    .demo {
+        width: 450px;
+    }
+    ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    li {
+        display: block;
+        float: left;
+        margin-right: 6px;
+        cursor: pointer;
+    }
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+}
+.contact-form {
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 6px 3px;
+        margin-bottom: 16px;
+        resize: vertical;
+        font-size: 1.3rem;
+    }
+    &__field {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
 
-    // .slider-gallery .slide,
-    // .slider-thumbs .slide {
-    //     min-height: 10rem;
-    //     border: 6px solid $border-color;
-    //     padding: 6px;
-    // }
-    // .slider-gallery .slide {
-    //     min-height: 28rem;
-    //     border-color: lightgreen;
-    // }
-    // .slider-thumbs .slick-current .slide {
-    //     border-color: lightblue;
-    // }
+    input[type="submit"] {
+        background-color: $primary-color;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    input[type="submit"]:hover {
+        filter: brightness(120%);
+    }
+}
+
+.contact-show {
+    &__item {
+        display: flex;
+        margin-top: 2rem;
+    }
+    i {
+        width: 60px;
+        height: 60px;
+        background-color: $primary-color;
+        color: $white-color;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        padding-top: 2rem;
+        text-align: center;
+        margin-right: 2rem;
+    }
+    &__content {
+        h4 {
+            font-weight: 550;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+        p {
+            color: $grey-color;
+        }
+    }
+}
+.shop-cart {
+    &__list {
+        border: 1px solid $border-color;
+        width: 100%;
+        display: inline-block;
+        margin: 1rem 0;
+    }
+    &__item {
+        margin-top: 2rem;
+    }
+    &__close {
+        display: block;
+        padding: 10px 0 15px;
+        i {
+            background-color: $primary-color;
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            padding: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+    &__title {
+        margin: 2rem 0;
+        h4 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        span {
+            font-size: 1.6rem;
+            color: $primary-color;
+        }
+    }
+    &__quantity {
+        display: flex;
+        align-items: center;
+        h6 {
+            font-size: 1.6rem;
+            margin-right: 1.2rem;
+        }
+        input {
+            width: 80px;
+            border: 1px solid #ececec;
+            color: $grey-color;
+        }
+    }
+    &__price {
+        color: $grey-color;
+        font-size: 2.2rem;
+    }
+
+    &__payment {
+        border: 1px solid $border-color;
+        padding: 10px;
+        font-size: 1.8rem;
+    }
+    &__payment-list {
+        color: $text-color;
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.6rem 0;
+
+            h6 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &__payment-total {
+        padding-top: 2rem;
+        border-top: 1px solid $border-color;
+        display: flex;
+        justify-content: space-between;
+    }
 }

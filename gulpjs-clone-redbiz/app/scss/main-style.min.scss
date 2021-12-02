@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /* library styles */
-@import "lib/_bootstrap.min", "lib/_swiper", "lib/_aos", "lib/_lightgallery.min", "lib/_fontawesomepro531";
+@import "lib/_bootstrap.min", "lib/_swiper", "lib/_aos", "lib/_lightgallery.min", "lib/_fontawesomepro531", "lib/_lightslider";
 
 /* layout styles */
 @import "./layout/_variables";
 
-@import "./layout/_mixin";
+@import "./layout/_mixins";
 
 @import "./layout/_base";
 
