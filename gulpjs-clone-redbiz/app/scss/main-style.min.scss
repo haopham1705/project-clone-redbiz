@@ -1,5 +1,14 @@
-@import './layout/variables';
-@import './layout/_mixin';
-@import './layout/_base';
-@import './layout/_main';
-@import './layout/_responsive';
+@charset "UTF-8";
+/* library styles */
+@import "lib/_bootstrap.min", "lib/_swiper", "lib/_aos", "lib/_lightgallery.min", "lib/_fontawesomepro531", "lib/_lightslider";
+
+/* layout styles */
+@import "./layout/_variables";
+
+@import "./layout/_mixins";
+
+@import "./layout/_base";
+
+@import "./layout/_main";
+
+@import "./layout/_responsive";

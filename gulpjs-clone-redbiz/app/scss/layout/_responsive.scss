@@ -1,8 +1,7 @@
 @import "./variables";
-@import "./mixin";
+@import "./mixins";
 
 /* Mobile */
-// @media (max-width: 739px)  
 @include maxWidth(739px) {
     .hide-on-mobile {
         display: none;
@@ -14,7 +13,6 @@
 }
 
 /* Mobile & Tablet */
-// @media (max-width: 1023px)  
 @include maxWidth(1023px) {
     .hide-on-mobile-tablet {
         display: none;
@@ -27,7 +25,6 @@
 }
 
 /* Tablet */
-// @media (min-width: 740px) and (max-width: 1023px) 
 @include betweenWidth(740px, 1023px) {
     .hide-on-tablet {
         display: none;
@@ -35,7 +32,6 @@
 }
 
 /* PC */
-// @media (min-width: 1024px)
 @include minWidth(1024px) {
     $header-height: 75px;
 
@@ -89,12 +85,23 @@
 
     .main-content {
         padding-top: $header-height + 20px;
-
         &__slider {
             height: 100vh;
             img {
                 object-fit: cover;
             }
+        }
+    }
+    .blog-list {
+        &__img-content {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    .contact-form {
+        &__field {
+            display: flex;
+            flex-wrap: nowrap;
         }
     }
 }

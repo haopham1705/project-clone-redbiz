@@ -11,14 +11,14 @@ html {
     font-family: "Fira Sans", sans-serif;
     box-sizing: border-box;
 }
-/* font-size 62.5% -> convert rem unit (1rem = 10px) */
+/* font-size 62.5% -> default font-size 16 -> convert to rem unit (1rem = 10px) */
 
 .img-content {
     margin: 1.3rem 0;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -31,6 +31,16 @@ img {
 }
 
 /* Button Style */
+.btn-f {
+    text-decoration: none;
+    outline: none;
+    border: 0;
+}
+.btn-f:hover {
+    text-decoration: none;
+    color: $white-color;
+    filter: brightness(125%);
+}
 
 .primary-btn {
     background: $primary-color;
@@ -41,6 +51,13 @@ img {
     padding: 1rem 1.3rem;
     transition: all 0.4s ease;
     text-decoration: none;
+    outline: none;
+    border: 0;
+}
+.primary-btn:hover {
+    text-decoration: none;
+    color: $white-color;
+    filter: brightness(125%);
 }
 
 .secondary-btn {
@@ -91,8 +108,7 @@ img {
         margin: 1rem 0;
         font-size: 1.2rem;
     }
-    &__list {
-        /* border: 1px solid red; */
+    &__list { 
         padding: 0;
         margin: 0;
     }

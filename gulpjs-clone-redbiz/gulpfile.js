@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const gulpif = require('gulp-if');
 const rename = require('gulp-rename');
 const useref = require('gulp-useref');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const htmlTemplate = require('gulp-template-html');
@@ -38,75 +38,86 @@ const AUTOPREFIXER_BROWSERS = [
     'android >= 4',
     'bb >= 10'
 ];
+
+gulp.task('gtest', function () {
+    console.log("try test");
+});
+
 // SASS
 gulp.task('sass', done => {
     return gulp.src(['./app/scss/main-style.min.scss'])
-    .pipe(sourcemaps.init())
-    .pipe(plumber({
-        errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
-    .pipe(wait(500))
-    .pipe(sass({
-        outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe(sourcemaps.write('map'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({
-        stream: true
-    }));
+        .pipe(sourcemaps.init())
+        .pipe(plumber({
+            errorHandler: notify.onError("Error: <%= error.message %>")
+        }))
+        .pipe(wait(500))
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe(sourcemaps.write('map'))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
     done();
 });
 
-var condition = function(file){
+var condition = function (file) {
     return true;
 }
 
-gulp.task('beautyjs', function(){
+gulp.task('beautyjs', function () {
     gulp.src('./app/js/lib/*.js')
-    .pipe(gulpif(condition, uglify()))
-    .pipe(gulp.dest('dist/js/'));
+        .pipe(gulpif(condition, uglify()))
+        .pipe(gulp.dest('dist/js/'));
 });
 
 // optimizing css & JS
-gulp.task('useref', function(done){
-    return gulp.src('./app/*.html')
-    .pipe(useref())
-    .pipe('dist');
+gulp.task('useref', function (done) {
+    return gulp.src('app/*.html')
+        .pipe(useref())
+        // .pipe(gulpif('app/js/*.js', uglify()))
+        // .pipe(gulpif('app/css/*.css', cssnano()))
+        .pipe(gulp.dest('dist'));
     done();
 });
 
-gulp.task('uglifyes', function(){
-    return gulp.src('dist/js/main.min/js')
-    .pipe(rename('bundle.min.js'))
-    .pipe(sourcemaps.init())
-    .pipe(uglifyes())
-    .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('dist/js/'));
+gulp.task('uglifyes', function () {
+    return gulp.src('dist/js/main.min.js')
+        .pipe(rename('bundle.min.js'))
+        .pipe(sourcemaps.init())
+        .pipe(uglifyes())
+        .pipe(sourcemaps.write('maps')) // Inline source maps.
+        // For external source map file:
+        //.pipe(sourcemaps.write('./maps')) // In this case: lib/maps/bundle.min.js.map
+        .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('lint', function(){
-    return gulp.src('./app/js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('gulp-jshint-html-reporter', {
-        filename: __dirname + "/jshint-output.html",
-        createMissingFolders: false
-    }));
+// npm i gulp-jshint-html-reporter
+gulp.task('lint', function () {
+    return gulp.src('app/js/*.js')
+        .pipe(jshint())
+        .pipe(
+            jshint.reporter("gulp-jshint-html-reporter", {
+                filename: __dirname + "/jshint-output.html",
+                createMissingFolders: false
+            })
+        );
 });
 
 // optimizing Images
-gulp.task('images', function(){
-    return gulp.src('./app/images/**/*.+(png|PNG|jpg|JPG|jpeg|gif|svg|ico)')
-    .pipe(cache(imagemin({
-        interlaced: true,
-    })))
-    .pipe(gulp.dest('dist/images'));
+gulp.task('images', function () {
+    return gulp.src('app/images/**/*.+(png|PNG|jpg|JPG|jpeg|gif|svg|ico)')
+        .pipe(cache(imagemin({
+            interlaced: true,
+        })))
+        .pipe(gulp.dest('dist/images'));
     done();
 });
 
 gulp.task('imagesCss', function () {
     return gulp.src('app/scss/images/**/*.+(png|PNG|jpg|JPG|jpeg|gif|svg|ico)')
-        // Caching images that ran through imagemin
         .pipe(cache(imagemin({
             interlaced: true,
         })))
@@ -115,19 +126,19 @@ gulp.task('imagesCss', function () {
 });
 
 // dist/fonts
-gulp.task('font', function(){
+gulp.task('fonts', function () {
     return gulp.src('./app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts'))
 });
 
 // build pages
 gulp.task('template2', done => {
     return gulp.src('./app/page/mb/*.html')
-    .pipe(htmlTemplate('./app/template/mbglobe.html'))
-    .pipe(gulp.dest('dist'))
-    .pipe(browserSync.reload({
-        stream: true
-    }));
+        .pipe(htmlTemplate('./app/template/mbglobe.html'))
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
     done();
 });
 
@@ -161,27 +172,30 @@ gulp.task("templatehead2mb", done => {
     done();
 });
 // End build pages
-async function menuCate(){ /* task */}
+
+async function menuCate() { /* task */ }
 gulp.task('buildeEjs', done => {
     return gulp.src('./app/page/**/*.ejs')
-    .pipe(ejs({menuCate}).on('error', log), { async: true})
-    .pipe(gulp.dest('dist'));
+        .pipe(ejs({ menuCate }).on('error', log), { async: true })
+        .pipe(gulp.dest('dist'));
     done();
 });
 
 // Watch File Changes
-gulp.task('watch', function(){
+gulp.task('watch', function () {
     gulp.watch('./app/scss/**/*.scss', gulp.series('sass'));
     gulp.watch('./app/js/**/*.js', browserSync.reload);
-    gulp.watch('./app/images/*', gulp.series('template'));
+    gulp.watch('./app/images/*', gulp.series('images'));
     gulp.watch('./app/template/globe.html', gulp.series('template'));
     gulp.watch('./app/template/mbglobe.html', gulp.series('template2'));
     gulp.watch('./app/page/*.html', gulp.series('template'));
     gulp.watch('./app/page/mb/*.html', gulp.series('template2'));
-    gulp.log('Finish task');
+    console.log('Finish task');
 });
 
-gulp.task('browserSync', function(){
+
+// Start browserSync Server
+gulp.task('browserSync', function () {
     browserSync.init({
         port: 3600,
         server: {
@@ -243,10 +257,4 @@ gulp.task('start', gulp.parallel(
     'watch',
     'browserSync'
 ));
-
-// function style() {
-//     return gulp.src('./scss/**/*.scss')
-//         .pipe(sass())
-//         .pupe(gulp.dest('./css'))
-// }
-// exports.style = style;
+//End task - Clone Redbiz

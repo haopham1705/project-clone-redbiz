@@ -19,6 +19,7 @@ body {
     z-index: 101;
     background-color: $white-color;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
     &__logo img {
         width: 100%;
         max-width: 180px;
@@ -86,6 +87,7 @@ body {
     transition: margin-left 0.5s;
     /* padding: 16px; */
 }
+
 .main-content {
     padding-top: $header-height;
 }
@@ -147,6 +149,7 @@ body {
         transition: 0.4s background-color ease-out;
         border: 1px solid $border-color;
     }
+
     img:hover {
         /* box-shadow: var(--shadow-value); */
         background-color: $grey-1-color;
@@ -171,19 +174,23 @@ body {
     background-position: 50% 50%;
     padding: 90px 0;
     box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.5);
+
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
+
     &__content span {
         color: $white-color;
     }
+
     &__content h1 {
         color: $white-color;
         font-size: 4rem;
     }
+
     &__content p {
         color: $white-color;
         font-size: 2.8rem;
@@ -198,6 +205,7 @@ body {
 .section-heading {
     margin-bottom: 10px;
     text-align: center;
+
     span {
         position: relative;
         font-size: 2rem;
@@ -205,15 +213,19 @@ body {
         line-height: 200%;
         margin-bottom: 10px;
     }
+
     &__light-title {
         color: $white-color;
     }
+
     &__dark-title {
         color: $text-color;
     }
+
     &__primary-title {
         color: $primary-color;
     }
+
     h2 {
         position: relative;
         font-size: 4rem;
@@ -222,6 +234,7 @@ body {
         line-height: 130%;
         margin-bottom: 10px;
     }
+
     p {
         font-size: 1.3rem;
         font-weight: 400;
@@ -230,6 +243,7 @@ body {
         padding-top: 1rem;
         margin-bottom: 0px;
     }
+
     h4 {
         position: relative;
         font-size: 2.5rem;
@@ -276,6 +290,7 @@ body {
         width: 100%;
         margin: 20px auto;
     }
+
     &__line::before {
         content: "";
         display: block;
@@ -287,15 +302,18 @@ body {
         background: #fff;
         border-radius: 50%;
     }
+
     h3 {
         line-height: 1;
         font-size: 4rem;
         font-weight: 200;
     }
+
     h4 {
         font-size: 1.6rem;
         font-weight: 400;
     }
+
     p {
         font-size: 1.2rem;
         color: $grey-color;
@@ -318,6 +336,7 @@ body {
         font-weight: 550;
         margin-top: 15px;
     }
+
     i {
         color: $primary-color;
         padding-right: 1rem;
@@ -363,6 +382,7 @@ body {
         padding: 7px;
         list-style-type: none;
     }
+
     &__price h4 {
         display: inline-block;
         color: $text-color;
@@ -396,4 +416,9 @@ body {
         transition-duration: 0.3s;
         text-decoration: none;
     }
+}
+
+.head-title {
+    padding: 100px 0;
+    @include bgc(#ccc)
 }
