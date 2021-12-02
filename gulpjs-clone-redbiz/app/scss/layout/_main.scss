@@ -736,6 +736,7 @@ body {
         margin-bottom: 16px;
         resize: vertical;
         font-size: 1.3rem;
+        background-color: $bg-grey-color;
     }
     &__field {
         display: flex;
@@ -746,13 +747,14 @@ body {
 
     input[type="submit"] {
         background-color: $primary-color;
-        color: white;
+        color: $white-color;
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         width: 100%;
         font-size: 1.3rem;
+
     }
 
     input[type="submit"]:hover {
@@ -763,7 +765,9 @@ body {
 .contact-show {
     &__item {
         display: flex;
-        margin-top: 2rem;
+        margin: 2rem 0 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid $border-color;
     }
     i {
         width: 60px;
@@ -784,6 +788,7 @@ body {
         }
         p {
             color: $grey-color;
+            font-size: 1.4rem;
         }
     }
 }
@@ -792,7 +797,7 @@ body {
         border: 1px solid $border-color;
         width: 100%;
         display: inline-block;
-        margin: 1rem 0;
+        margin: 0 0 1rem;
     }
     &__item {
         margin-top: 2rem;
@@ -811,7 +816,7 @@ body {
         }
     }
     &__title {
-        margin: 2rem 0;
+        margin: 1rem 0;
         h4 {
             font-size: 2rem;
             font-weight: 600;
@@ -822,6 +827,7 @@ body {
         }
     }
     &__quantity {
+        margin: 1rem 0;
         display: flex;
         align-items: center;
         h6 {
@@ -835,6 +841,7 @@ body {
         }
     }
     &__price {
+        margin: 1rem 0;
         color: $grey-color;
         font-size: 2.2rem;
     }
