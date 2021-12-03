@@ -15,7 +15,7 @@ html {
 }
 /* font-size 62.5% -> default font-size 16 -> convert to rem unit (1rem = 10px) */
 body {
-    position: relative;
+    // position: relative;
     color: $text-color;
 }
 #app {

@@ -55,6 +55,10 @@
     background-color: $white-color;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
+    &__navbar {
+        display: flex;
+    }
+
     &__logo {
         img {
             width: 100%;
