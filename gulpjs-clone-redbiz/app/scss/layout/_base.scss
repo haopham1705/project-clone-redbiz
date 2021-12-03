@@ -50,26 +50,19 @@ img {
     text-decoration: none;
     outline: none;
     border: 0;
-}
-.btn-f:hover {
-    text-decoration: none;
-    color: $white-color;
-    filter: brightness(125%);
-}
+} 
 
 .primary-btn {
     background: $primary-color;
     color: $white-color;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 550;
     border-radius: 50px;
     padding: 1rem 1.3rem;
     transition: all 0.4s ease;
-    text-decoration: none;
-    outline: none;
-    border: 0;
 }
 .primary-btn:hover {
+    background-color: $bg-black-color;
     text-decoration: none;
     color: $white-color;
     filter: brightness(125%);
@@ -87,6 +80,29 @@ img {
     margin: 15px 0px 2px 0px;
     padding: 15px 20px;
     transition: all 0.4s ease;
+}
+
+.secondary-btn:hover {
+    background-color: $primary-color;
+    text-decoration: none;
+    color: $white-color;
+    filter: brightness(125%);
+}
+
+.third-btn {
+    background: $primary-color;
+    color: $white-color;
+    font-size: 1.4rem;
+    font-weight: 550;
+    padding: 1rem 8rem;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.third-btn:hover {
+    background-color: $white-color;
+    color: $primary-color;
+    border: 2px solid $primary-color;
     text-decoration: none;
 }
 
@@ -95,77 +111,4 @@ img {
     font-weight: 550;
     font-size: 1.2rem;
     padding: 11px 22px;
-}
-
-/* Footer Style */
-.footer {
-    background-color: $text-color;
-    color: $white-color;
-    padding: 3rem 1.5rem;
-    &__title {
-        font-size: 2.3rem;
-        line-height: 1.1;
-        margin-top: 2.5rem;
-    }
-    &__title::after {
-        content: "";
-        display: block;
-        width: 20%;
-        height: 2px;
-        background: $primary-color;
-        margin-top: 1rem;
-    }
-    &__logo-img {
-        width: 100%;
-        max-width: 160px;
-    }
-    &__detail-text {
-        margin: 1rem 0;
-        font-size: 1.2rem;
-    }
-    &__list {
-        padding: 0;
-        margin: 0;
-    }
-    &__list i {
-        margin-right: 1rem;
-    }
-    &__list li {
-        margin: 1.2rem 0;
-        list-style-type: none;
-    }
-    &__list a {
-        color: $grey-1-color;
-        font-size: 1.8rem;
-        text-decoration: none;
-    }
-
-    /* Footer Recent */
-    &__recent {
-        list-style-type: none;
-        padding: 0;
-    }
-    &__recent li {
-        display: flex;
-        margin: 1.2rem 0;
-    }
-    &__recent img {
-        max-width: 100%;
-        width: 75px;
-        height: auto;
-        margin-right: 1rem;
-    }
-    .recent-post {
-        display: flex;
-        flex-direction: column;
-
-        span {
-            color: $grey-1-color;
-        }
-
-        a {
-            text-decoration: none;
-            color: $light-grey-color;
-        }
-    }
 }
