@@ -1,3 +1,5 @@
+
+
 .product-feature {
     border: 1px solid $border-color;
     box-shadow: $shadow-card-value;
@@ -46,7 +48,7 @@
 
     li {
         color: $grey-color;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 400;
         padding: 15px;
         list-style-type: none;
@@ -55,6 +57,7 @@
     &__title {
         font-size: 2.5rem;
         letter-spacing: 2px;
+        margin-bottom: 2rem;
     }
     &__price {
         h4 {

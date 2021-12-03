@@ -7,7 +7,7 @@
 }
 .topbar {
     height: $topbar-height;
-    background-color: $bg-black-color;
+    background-color: $light-black-color;
     color: $white-color;
 
     &__info {
@@ -15,8 +15,8 @@
         justify-content: flex-start;
         align-items: center;
         padding: 10px 0;
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1.3rem;
+        font-weight: 550;
 
         span {
             margin-right: 10px;
@@ -35,7 +35,7 @@
         padding: 10px 0;
 
         i {
-            color: $grey-color;
+            color: $light-grey-color;
             font-size: 1.5rem;
             margin-left: 1.5rem;
         }
@@ -57,6 +57,7 @@
 
     &__navbar {
         display: flex;
+        align-items: center;
     }
 
     &__logo {
@@ -80,34 +81,37 @@
         padding-top: 2rem;
         box-shadow: 5px 0px 22px 0px rgba(0, 0, 0, 0.34);
 
-        ul {
+        &__list {
             margin-top: 2.5rem;
         }
-
-        ul li {
+        &__item {
             font-size: 25px;
             display: block;
             transition: 0.3s;
+            border-top: 1px solid $border-color;
+            a {
+                padding: 10px 30px 10px 25px;
+                display: flex;
+                justify-content: space-between;
+                text-decoration: none;
+                color: $text-color;
+                font-size: 1.6rem;
+            } 
+            a:hover {
+                color: $grey-color;
+            }
         }
-
-        a {
-            padding: 15px 8px 8px 25px;
-            display: block;
-            text-decoration: none;
-            color: $text-color;
-            font-size: 1.6rem;
-        }
-
-        a:hover {
-            color: $grey-color;
+        &__item:last-child {
+            border-bottom: 1px solid $border-color;
         }
 
         .closebtn {
             position: absolute;
-            top: 1rem;
+            top: 0;
             right: 25px;
             font-size: 36px;
             margin-left: 50px;
+            color: $grey-color;
         }
     }
 }
@@ -163,6 +167,7 @@
 /* Client Carousel Style */
 .swiper-slide-client {
     margin: 1.5rem 0;
+    padding: 0;
     /* max-width: 280px; */
     height: auto;
     background-color: $white-color;
@@ -183,6 +188,7 @@
         transition: 0.4s background-color ease-in;
     }
 }
+
 
 /* Section Content */
 .section-block {
@@ -231,7 +237,7 @@
     font-weight: 550;
     span {
         position: relative;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 500;
         line-height: 200%;
         margin-bottom: 10px;
@@ -247,16 +253,16 @@
     }
     h2 {
         position: relative;
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 550;
         // color: $text-color;
         line-height: 130%;
         margin-bottom: 10px;
     }
     p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 400;
-        // color: $white-color;
+        color: $text-grey-color;
         line-height: 160%;
         padding-top: 1rem;
         margin-bottom: 0px;
@@ -364,9 +370,23 @@
     margin: 15px 0px;
     box-shadow: $shadow-card-value;
 
-    &__inner {
+    &__content {
         position: relative;
         padding: 20px;
+    }
+    &__title {
+        font-size: 2rem;
+        color: $text-color;
+    }
+    &__title::before {
+        content: "●";
+        color: $primary-color;
+        margin-right: 1rem; 
+        font-size: 1.4rem;
+    }
+    &__paragraph {
+        font-size: 1.4rem;
+        color: $text-grey-color;
     }
 }
 
