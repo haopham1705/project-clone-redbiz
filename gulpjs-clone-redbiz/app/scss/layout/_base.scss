@@ -10,17 +10,20 @@
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
-    font-family: "Fira Sans", sans-serif;
     box-sizing: border-box;
 }
-/* font-size 62.5% -> default font-size 16 -> convert to rem unit (1rem = 10px) */
-body {
-    // position: relative;
+/* font-size 62.5% -> default font-size 16
+ -> convert to rem unit (1rem = 10px) */
+body { 
     color: $text-color;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
 }
+
 #app {
     overflow: hidden;
 }
+
 .img-content {
     margin: 1.3rem 0;
 }
@@ -50,7 +53,7 @@ img {
     text-decoration: none;
     outline: none;
     border: 0;
-} 
+}
 
 .primary-btn {
     background: $primary-color;
@@ -74,7 +77,7 @@ img {
     color: $white-color;
     border-radius: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     width: 100%;
     margin: 15px 0px 2px 0px;
@@ -90,11 +93,14 @@ img {
 }
 
 .third-btn {
+    display: inline-block;
+    width: 100%;
     background: $primary-color;
     color: $white-color;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 550;
-    padding: 1rem 8rem;
+    margin: 15px 0px 2px 0px;
+    padding: 12px 20px;
     border-radius: 5px;
     transition: all 0.4s ease;
 }
@@ -102,7 +108,7 @@ img {
 .third-btn:hover {
     background-color: $white-color;
     color: $primary-color;
-    border: 2px solid $primary-color;
+    border: 1px solid $primary-color;
     text-decoration: none;
 }
 

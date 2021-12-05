@@ -104,11 +104,9 @@
         width: calc(100% / 3);
         margin: 2px;
     }
-
     .tablink:hover {
         // background-color: #777;
     }
-
     /* Style the tab content (and add height:100% for full page content) */
     .tabcontent {
         color: $text-color;
@@ -175,27 +173,5 @@
 }
 
 .product-gallery {
- 
 }
-
-// .product-gallery {
-//     .demo {
-//         width: 450px;
-//     }
-//     ul {
-//         list-style: none outside none;
-//         padding-left: 0;
-//         margin-bottom: 0;
-//     }
-//     li {
-//         display: block;
-//         float: left;
-//         margin-right: 6px;
-//         cursor: pointer;
-//     }
-//     img {
-//         display: block;
-//         height: auto;
-//         max-width: 100%;
-//     }
-// }
+ 

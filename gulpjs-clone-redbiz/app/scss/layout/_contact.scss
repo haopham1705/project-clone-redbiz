@@ -2,6 +2,7 @@
     margin-top: 20px;
 }
 .contact-form {
+    padding-bottom: 2.5rem;
     input[type="text"],
     input[type="email"],
     select,
@@ -43,7 +44,7 @@
     }
 }
 
-.contact-show {
+.contact-show { 
     &__item {
         display: flex;
         margin: 0 0 2.5rem;
