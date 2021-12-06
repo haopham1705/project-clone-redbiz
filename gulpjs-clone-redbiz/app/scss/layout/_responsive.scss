@@ -41,7 +41,7 @@
 
     .header {
         position: sticky;
-        top: $topbar-height;
+        top: 0;
         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
         // border: 1px solid red;
 
@@ -76,7 +76,7 @@
                     display: flex;
                     align-items: center;
                     font-weight: 550;
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                     text-transform: uppercase;
                     padding: 15px 0;
                     i {
