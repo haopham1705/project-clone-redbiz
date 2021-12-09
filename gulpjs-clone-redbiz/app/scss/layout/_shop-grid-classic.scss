@@ -1,0 +1,95 @@
+.product-item {
+    box-shadow: $shadow-card2-value;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    border: 1px solid $border-color;
+    
+    .product-show {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        &__button {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+
+            .product-btn-detail {
+                background-color: $primary-color;
+                padding: 1.5rem 0.5rem;
+                transition-duration: 0.5s;
+            }
+
+            .product-btn-cart {
+                background: $text-color;
+                padding: 1.5rem 0.5rem;
+                transition-duration: 0.5s;
+            }
+
+            h4 {
+                color: $white-color;
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                i {
+                    color: $white-color;
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                    transition-duration: 0.5s;
+                }
+            }
+            
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &:hover .product-show__img {
+        transform: scale(1.05);
+    }
+
+    .product-info {
+        text-align: center;
+        padding: 1.5rem 0;
+
+        &__title {
+            font-weight: 550;
+            font-size: 2.1rem;
+            a {
+                color: $primary-color;
+            }
+        }
+
+        &__price {
+            color: $primary-color;
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        &__rating {
+            margin-top: 1.5rem;
+
+            li {
+                display: inline-block;
+            }
+            i {
+                color: $text-color;
+                font-size: 1.8rem;
+                margin: 0 1px;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: $shadow-card-value;
+    }
+}

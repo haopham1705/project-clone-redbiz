@@ -1,0 +1,35 @@
+.product-feature {
+    border: 1px solid $border-color;
+    box-shadow: $shadow-card-value;
+    padding: 1.3rem 0;
+    margin: 1.2rem 0;
+    background-color: $white-color;
+    overflow: hidden;
+    transition: 0.45s;
+
+    &__title {
+        padding: 1rem;
+        h4 {
+            font-size: 1.6rem;
+            color: $text-color;
+        }
+        span {
+            font-size: 1.1rem;
+            color: $grey-1-color;
+        }
+        h5 {
+            text-align: center;
+            color: $primary-color;
+            font-size: 1.7rem;
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        padding: 0.5rem 1.4rem;
+        img {
+            width: 100%;
+            transform: scale(1.08);
+        }
+    }
+}
