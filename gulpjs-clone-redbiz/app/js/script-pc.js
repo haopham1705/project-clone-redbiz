@@ -42,4 +42,30 @@ var swiperClient = new Swiper(".mySwiperCarousel", {
         delay: 2000,
         disableOnInteraction: false
     }
-}); 
+});
+
+/* Start scroll go top js
+============================================================================================ */
+var prevScrollpos = window.pageYOffset;
+function checkScrollGoTop() {
+
+    // Start effect fade in btn-go-top
+    if ($(this).scrollTop() <= 500) {
+        $('.scroll-to-top').fadeOut();
+    } else {
+        $('.scroll-to-top').fadeIn();
+    }
+
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        $('#btn_gotop').fadeIn('300');
+        document.querySelector("#btn_gotop").style.opacity = "1";
+    } else {
+        document.querySelector("#btn_gotop").style.opacity = "0";
+        $('#btn_gotop').fadeOut('fast');
+    }
+    prevScrollpos = currentScrollPos;
+    // End effect fade in btn-go-top
+}
+    /* End scroll go top js
+============================================================================================ */
