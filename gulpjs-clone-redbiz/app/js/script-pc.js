@@ -3,11 +3,14 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "80vw"; 
     document.getElementById("overlay-navbar").style.display = "block"; 
+    document.getElementsByClassName("sidenav-list").style.display = "block"; 
+
 } 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("app").style.marginLeft = "0";
     document.getElementById("overlay-navbar").style.display = "none"; 
+    document.getElementsByClassName("sidenav-list").style.display = "none"; 
 } 
 
 // home-head-slider
