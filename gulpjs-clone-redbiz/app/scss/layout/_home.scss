@@ -149,14 +149,14 @@
             top: 45%;
             width: 98px;
             height: 98px;
-            left: -90px;
+            left: 0;
             cursor: pointer;
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
         }
         .thumb-next {
             left: auto;
-            right: -90px;
+            right: 0;
         }
     }
 }

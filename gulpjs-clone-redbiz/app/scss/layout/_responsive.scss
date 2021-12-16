@@ -35,6 +35,10 @@
 @include minWidth(1024px) {
     $header-height: 75px;
 
+    #app {
+        overflow: inherit;
+    }
+
     .hide-on-pc {
         display: none;
     }
