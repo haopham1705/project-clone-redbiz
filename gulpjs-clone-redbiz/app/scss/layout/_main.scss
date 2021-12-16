@@ -108,20 +108,24 @@
             }
             a {
                 padding: 10px 30px 10px 25px;
-                display: flex;
-                justify-content: space-between;
+                display: block;
+                transition: 0.3s;
                 text-decoration: none;
                 color: $text-color;
             }
             a:hover {
                 color: $primary-color;
             }
-
             i {
                 font-size: 1.2rem;
                 color: $grey-color;
             }
+            .dropdown-btn {
+                display: flex;
+                justify-content: space-between;
+            }
         }
+
         &__item:last-child {
             border-bottom: 1px solid $border-color;
         }
@@ -136,7 +140,9 @@
         }
     }
 }
-
+#sidenav-list {
+    display: none;
+}
 #overlay-navbar {
     display: none;
     width: 100vw;
@@ -500,7 +506,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba(17, 17, 17, 0.296);
+        background-color: rgba(17, 17, 17, 0.496);
     }
     h2 {
         color: $white-color;
