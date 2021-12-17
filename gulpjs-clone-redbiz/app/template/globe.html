@@ -195,7 +195,7 @@
 	<!-- <script defer src="js/bundle.min.js"></script> -->
 
 	<script type="text/javascript" data-type="lazy" data-src="js/bundle.min.js"></script>
- 
+
 	<script type="text/javascript" data-type="lazy" data-src="js/bundle.min.js"></script>
 	<script type="text/javascript" id="flying-scripts">
 		const loadScriptsTimer = setTimeout(loadScripts, 2 * 1000);
@@ -219,6 +219,21 @@
 		function loadScripts() {
 			document.querySelectorAll("script[data-type='lazy']").forEach(function (elem) {
 				elem.setAttribute("src", elem.getAttribute("data-src"))
+			});
+		}
+
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+			dropdown[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+					dropdownContent.style.display = "none";
+				} else {
+					dropdownContent.style.display = "block";
+				}
 			});
 		}
 	</script>

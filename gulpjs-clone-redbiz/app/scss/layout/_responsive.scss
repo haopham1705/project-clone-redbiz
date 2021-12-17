@@ -147,6 +147,13 @@
             }
         }
     }
+    // .customer-feedback {
+    //     .owl-nav {
+    //         [class*="owl-"] {
+    //         display: inline-block;
+    //     }
+    //     }
+    // }
     .blog-list {
         &__img-content {
             display: flex;
@@ -154,14 +161,14 @@
         }
     }
     .gallery-shop__item {
-    display: none;
+        display: none;
 
-    img {
-        max-width: 100%;
-        height: 450px;
-        object-fit: cover;
+        img {
+            max-width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
     }
-}
     .contact-form {
         &__field {
             display: flex;

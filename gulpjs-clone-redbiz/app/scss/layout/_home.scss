@@ -104,7 +104,7 @@
 }
 //Start Feedback style
 .feedback-section {
-    background-image: url("../images/white-paper-bg.jpeg");
+    background-image: url("../images/bg-white-paper2.jpeg");
     background-color: #ffffff;
     height: auto;
     background-position: center;
@@ -115,17 +115,18 @@
 }
 .feedback-slider {
     // border: 1px solid red;
+    text-align: center;
     &__item {
         position: relative;
         padding: 40px;
-        // background-color: #fefbd8;
-        text-align: center;
+        // background-color: #fefbd8; 
         p {
             line-height: 1.875;
             font-size: 17px;
             font-weight: 550;
             font-style: italic;
             color: rgb(69, 69, 69);
+            padding: 2.5rem 0;
         }
     }
     &__name {
@@ -137,9 +138,12 @@
         color: $grey-color;
     }
     &__mark {
-        font-size: 55px;
+        font-size: 23px;
         color: $primary-color;
         font-weight: 550;
+        i {
+            font-style: italic; 
+        }
     }
     &__thumb {
         .thumb-prev,
@@ -167,14 +171,14 @@
             position: relative;
             display: inline-block;
             bottom: 45px;
-            transition: all 0.2s ease-in;
-            display: none;
+            transition: all 0.2s ease-in; 
+            text-align: center;
+            margin: 2rem 0;
         }
         i {
             background-color: transparent;
             color: rgb(251, 90, 13);
-            font-size: 25px;
-            border: 3px solid red;
+            font-size: 25px; 
         }
     }
     .owl-prev {
@@ -194,8 +198,9 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 20px;
+        bottom: 10px;
         .owl-dot {
+            outline: 0;
             span {
                 width: 11px;
                 height: 11px;
@@ -222,7 +227,7 @@
 @media screen and (max-width: 767px) {
     .customer-feedback {
         .owl-dots {
-            display: block;
+            display: inline-block;
         }
         .owl-nav [class*="owl-"] {
             display: none;

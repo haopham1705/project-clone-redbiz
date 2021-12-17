@@ -1,10 +1,9 @@
-@import "./variables";
-@import "./mixins";
+// @import "./variables";
+// @import "./mixins";
 
 #app {
     transition: margin-left 0.5s;
     position: relative;
-    overflow: hidden;
 }
 
 .topbar {
@@ -35,7 +34,6 @@
         justify-content: flex-end;
         align-items: center;
         padding: 10px 0;
-
         i {
             color: $light-grey-color;
             font-size: 1.5rem;

@@ -197,13 +197,17 @@
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: $white-color;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
 }
+a:not([href]) {
+    color: $white-color;
+}
+
 
 .gallery-shop__next {
     right: 0;
@@ -212,7 +216,7 @@
 
 .gallery-shop__prev:hover,
 .gallery-shop__next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    // background-color: rgba(0, 0, 0, 0.8);
 }
 
 // .numbertext {

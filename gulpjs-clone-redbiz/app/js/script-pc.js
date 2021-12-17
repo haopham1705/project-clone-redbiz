@@ -4,7 +4,6 @@ function openNav() {
     document.getElementById("overlay-navbar").style.display = "block";
     document.getElementById("sidenav-list").style.display = "block";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("app").style.marginLeft = "0";
@@ -12,20 +11,6 @@ function closeNav() {
     document.getElementById("sidenav-list").style.display = "none";
 }
 
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-        } else {
-            dropdownContent.style.display = "block";
-        }
-    });
-}
 // home-head-slider
 var swiperSliderHome = new Swiper(".mySwiper", {
     spaceBetween: 30,
@@ -56,32 +41,6 @@ var swiperClient = new Swiper(".mySwiperCarousel", {
     }
 });
 
-/* Start scroll go top js
-============================================================================================ */
-// var prevScrollpos = window.pageYOffset;
-// function checkScrollGoTop() {
-
-//     // Start effect fade in btn-go-top
-//     if ($(this).scrollTop() <= 500) {
-//         $('.scroll-to-top').fadeOut();
-//     } else {
-//         $('.scroll-to-top').fadeIn();
-//     }
-
-//     var currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//         $('#btn_gotop').fadeIn('300');
-//         document.querySelector("#btn_gotop").style.opacity = "1";
-//     } else {
-//         document.querySelector("#btn_gotop").style.opacity = "0";
-//         $('#btn_gotop').fadeOut('fast');
-//     }
-//     prevScrollpos = currentScrollPos;
-// End effect fade in btn-go-top
-// }
-/* End scroll go top js
-============================================================================================ */
-
 // Feedback
 jQuery(document).ready(function ($) {
     var feedbackSlider = $(".feedback-slider");
@@ -94,8 +53,8 @@ jQuery(document).ready(function ($) {
         mouseDrag: true,
         touchDrag: true,
         navText: [
-            "<i class='fas fa-angle-left'></i>",
-            "<i class='fas fa-angle-right'></i>"
+            '<i class="fas fa-angle-left"></i>',
+            '<i class="fas fa-angle-right"></i>'
         ],
         responsive: {
             // breakpoint from 767 up
@@ -105,8 +64,6 @@ jQuery(document).ready(function ($) {
             }
         }
     });
-
-
 
     feedbackSlider.on("changed.owl.carousel", function (property) {
         var current = property.item.index;
@@ -154,4 +111,3 @@ jQuery(document).ready(function ($) {
         return false;
     });
 }); //end ready
-
