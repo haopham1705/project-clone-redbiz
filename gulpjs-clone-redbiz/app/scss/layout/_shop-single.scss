@@ -242,12 +242,24 @@ a:not([href]) {
     padding: 3px;
     cursor: pointer;
 }
+.gallery-shop__column:first-child {
+    padding-left: 0;
+}
+.gallery-shop__column:last-child {
+    padding-right: 0;
+}
 
 .gallery-shop__demo {
-    opacity: 0.6;
+    opacity: 1;
+    object-fit: cover;
+    border-bottom: 2px solid transparent;
 }
 
 .gallery-shop__active,
 .gallery-shop__demo:hover {
-    opacity: 1;
+    opacity: 0.5;
+} 
+
+.gallery-shop__active {
+    border-bottom: 2px solid $primary-color;
 }
