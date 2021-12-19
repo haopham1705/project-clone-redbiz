@@ -252,14 +252,14 @@ a:not([href]) {
 .gallery-shop__demo {
     opacity: 1;
     object-fit: cover;
-    border-bottom: 2px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 
 .gallery-shop__active,
 .gallery-shop__demo:hover {
-    opacity: 0.5;
+    opacity: 0.65;
 } 
 
 .gallery-shop__active {
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 4px solid $primary-color;
 }
