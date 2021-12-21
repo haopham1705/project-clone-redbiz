@@ -56,58 +56,11 @@ jQuery(document).ready(function ($) {
             '<i class="fas fa-angle-left"></i>',
             '<i class="fas fa-angle-right"></i>'
         ],
-        responsive: {
-            // breakpoint from 767 up
-            767: {
-                nav: true,
-                dots: false
-            }
-        }
+        // responsive: {
+        //     767: {
+        //         nav: true,
+        //         dots: false
+        //     }
+        // }
     });
-
-    // feedbackSlider.on("changed.owl.carousel", function (property) {
-    //     var current = property.item.index;
-    //     var prevThumb = $(property.target)
-    //         .find(".owl-item")
-    //         .eq(current)
-    //         .prev()
-    //         .find("img")
-    //         .attr("src");
-    //     var nextThumb = $(property.target)
-    //         .find(".owl-item")
-    //         .eq(current)
-    //         .next()
-    //         .find("img")
-    //         .attr("src");
-    //     var prevRating = $(property.target)
-    //         .find(".owl-item")
-    //         .eq(current)
-    //         .prev()
-    //         .find("span")
-    //         .attr("data-rating");
-    //     var nextRating = $(property.target)
-    //         .find(".owl-item")
-    //         .eq(current)
-    //         .next()
-    //         .find("span")
-    //         .attr("data-rating");
-    //     $(".thumb-prev").find("img").attr("src", prevThumb);
-    //     $(".thumb-next").find("img").attr("src", nextThumb);
-    //     $(".thumb-prev")
-    //         .find("span")
-    //         .next()
-    //         .html(prevRating + '<i class="fa fa-star"></i>');
-    //     $(".thumb-next")
-    //         .find("span")
-    //         .next()
-    //         .html(nextRating + '<i class="fa fa-star"></i>');
-    // });
-    // $(".thumb-next").on("click", function () {
-    //     feedbackSlider.trigger("next.owl.carousel", [300]);
-    //     return false;
-    // });
-    // $(".thumb-prev").on("click", function () {
-    //     feedbackSlider.trigger("prev.owl.carousel", [300]);
-    //     return false;
-    // });
-}); //end ready
+}); 
